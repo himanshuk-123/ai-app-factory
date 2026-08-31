@@ -1,0 +1,23 @@
+{
+  "projectId": "proj_1788203785706_e48c000f",
+  "idea": "Build CrownCut, a luxury barber salon booking app with haircut & beard service menu, master stylist selection, appointment time slot picker, and booking receipt confirmation",
+  "problem": "High-end clients and luxury barbershops lack a tailored, white-glove digital booking experience that reflects premium brand identity, seamless master-stylist scheduling, and transparent service customization.",
+  "targetUsers": [
+    "Affluent consumers seeking premium grooming services",
+    "Boutique and luxury barbershop owners",
+    "Independent master barbers and celebrity stylists"
+  ],
+  "valueProposition": "A high-end, aesthetic-first appointment booking platform tailored specifically for luxury barbershops, enabling seamless master-stylist selection, precise timing, and elevated customer receipt/loyalty experiences.",
+  "competitionAssessment": "The salon and barbershop booking market is heavily saturated with well-funded incumbents such as Squire, Booksy, Vagaro, and Fresha. Squire in particular dominates the specialized barbershop software space.",
+  "differentiation": "To compete, CrownCut must move beyond basic booking (which is commoditized) by offering VIP concierge features, luxury brand customization, high-end client relationship management (CRM), integrated pre-consultations, and exclusive membership/retainer models.",
+  "technicalFeasibility": "Very high feasibility. Core features involve standard scheduling algorithms, payment processing (Stripe), real-time calendar synchronization, and automated SMS/push notifications.",
+  "monetizationPotential": "Moderate. Can operate on a B2B SaaS subscription model per barber/chair, combined with transaction fees on pre-paid bookings or deposit holds.",
+  "keyRisks": [
+    "High market saturation and strong incumbents (Squire, Booksy) with deep market penetration",
+    "High customer acquisition cost (CAC) for acquiring individual barbershops",
+    "Lack of immediate feature differentiation in the initial MVP concept"
+  ],
+  "score": 5.8,
+  "recommendation": "MODIFY",
+  "validatedAt": "2026-08-31T19:16:34.828Z"
+}

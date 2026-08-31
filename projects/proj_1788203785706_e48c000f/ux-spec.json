@@ -1,0 +1,376 @@
+{
+  "projectId": "proj_1788203785706_e48c000f",
+  "idea": "Build CrownCut, a luxury barber salon booking app with haircut & beard service menu, master stylist selection, appointment time slot picker, and booking receipt confirmation",
+  "appName": "CrownCut",
+  "screens": [
+    {
+      "screenId": "screen_home",
+      "screenName": "Salon Showcase & Menu Screen",
+      "purpose": "Primary landing screen highlighting salon ambiance, signature grooming treatments, master barber recommendations, and express rebooking shortcuts.",
+      "userGoal": "Explore luxury services, view available master barbers, and rapidly initiate a bespoke booking.",
+      "entryPoints": [
+        "App Launch",
+        "Bottom Navigation: Home Tab"
+      ],
+      "exitActions": [
+        "Tap Service/Stylist Card -> Master Stylist Showcase Screen",
+        "Tap Quick Rebook -> Precision Slot & Concierge Screen",
+        "Tap VIP Badge -> Concierge Client Vault Screen"
+      ],
+      "layoutStructure": "Sticky luxury header with VIP badge + Hero ambiance video carousel + Express rebook banner + Horizontal signature services menu + Master stylist spotlight + Sticky bottom navigation bar",
+      "uiComponents": [
+        "Luxury Header Bar",
+        "Hero Ambiance Carousel",
+        "Express Rebook Card",
+        "Signature Service Menu Accordion",
+        "Master Stylist Horizontal Scroll",
+        "Concierge Quick-Assist Floating Pill"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Express Rebook Card",
+          "trigger": "Single tap on 'Rebook Last Service'",
+          "action": "Navigates directly to Precision Slot picker with previous stylist and service pre-selected",
+          "feedback": "Haptic tap, golden border glow pulse, 200ms slide-right transition"
+        },
+        {
+          "componentName": "Signature Service Menu Accordion",
+          "trigger": "Single tap on service item",
+          "action": "Expands card to reveal treatment details, duration, complimentary spirits pairing, and price",
+          "feedback": "Smooth 250ms expansion curve with chevron flip animation"
+        }
+      ],
+      "requiredData": [
+        "featuredAmbianceMedia",
+        "lastBookingData",
+        "signatureServicesList",
+        "featuredStylists",
+        "vipMembershipTier"
+      ],
+      "loadingState": "Dark obsidian shimmer placeholders over hero carousel, skeleton cards for stylist list and services",
+      "emptyState": "Minimalist luxury text banner: 'No recent visits recorded. Select a Master Stylist below to begin your journey.'",
+      "errorState": "Top slide-down alert banner: 'Unable to load live salon availability. Showing offline menu cache.' with a 'Refresh' button",
+      "successState": "Discreet top notification badge: 'VIP Membership Active: Complimentary Reserve Tasting Unlocked'",
+      "mobileConsiderations": "Full thumb-zone access for Express Rebook CTA; fluid 60fps horizontal carousel scroll; minimum 48px touch padding on all accordion controls"
+    },
+    {
+      "screenId": "screen_stylist_profile",
+      "screenName": "Master Stylist Showcase Screen",
+      "purpose": "Display detailed barber credentials, high-definition style lookbook gallery, client reviews, and master-tier pricing.",
+      "userGoal": "Evaluate stylist craftsmanship, review previous work, and choose the ideal master barber for a service.",
+      "entryPoints": [
+        "Tap Stylist Card on Salon Showcase Screen",
+        "Tap Barber Avatar in Concierge Client Vault Screen"
+      ],
+      "exitActions": [
+        "Tap 'Book Appointment with Stylist' -> Precision Slot & Concierge Screen",
+        "Tap Back Chevron -> Salon Showcase Screen"
+      ],
+      "layoutStructure": "Parallax hero image with gradient overlay + Sticky info header + Segmented navigation tabs (Portfolio, Credentials, Reviews) + Swipeable photo grid + Fixed bottom CTA bar",
+      "uiComponents": [
+        "Stylist Cover Hero Image",
+        "Master Barber Tier Badge",
+        "Segmented Control Tab Bar",
+        "High-Res Grid Lookbook",
+        "Client Testimonial Cards",
+        "Fixed Golden CTA Button"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "High-Res Grid Lookbook Photo",
+          "trigger": "Single tap on photo tile",
+          "action": "Opens full-screen high-res lightroom view with cut details and haircut angle controls",
+          "feedback": "Zoom-in zoom transition with subtle dimming of background UI"
+        },
+        {
+          "componentName": "Fixed Golden CTA Button",
+          "trigger": "Single tap",
+          "action": "Proceeds to Precision Slot screen with selected stylist pre-filtered",
+          "feedback": "Button scale press (0.96x), heavy haptic pulse, modal push transition"
+        }
+      ],
+      "requiredData": [
+        "stylistId",
+        "stylistName",
+        "title",
+        "bio",
+        "yearsExperience",
+        "ratingScore",
+        "lookbookGallery",
+        "clientReviews",
+        "tierPricing"
+      ],
+      "loadingState": "Skeleton silhouette background for hero image, grid shimmer blocks for portfolio gallery",
+      "emptyState": "Portfolio placeholder card: 'Stylist portfolio updating. Request signature cut styles directly during consultation.'",
+      "errorState": "Inline card alert: 'Unable to update stylist schedule. Tap to retry loading lookbook.'",
+      "successState": "Gold checkmark badge pulse on 'Master Barber Verified' icon upon full data load",
+      "mobileConsiderations": "Optimized image preloading for smooth scrolling; swipe-down gesture to dismiss full-screen lightbox; sticky CTA stays fixed above nav bar"
+    },
+    {
+      "screenId": "screen_booking_picker",
+      "screenName": "Precision Slot & Concierge Screen",
+      "purpose": "Provide exact appointment date/time slot selection and granular concierge customization (beverage, music, conversation preference).",
+      "userGoal": "Lock in a precise appointment time slot and tailor every detail of the in-chair experience.",
+      "entryPoints": [
+        "Tap 'Book' from Master Stylist Showcase Screen",
+        "Tap 'Quick Rebook' from Salon Showcase Screen"
+      ],
+      "exitActions": [
+        "Tap 'Confirm & Authorize' -> Luxury Confirmation Receipt Screen",
+        "Tap Back Chevron -> Master Stylist Showcase Screen"
+      ],
+      "layoutStructure": "Top sticky horizontal calendar slider + Scrollable time slot matrix + Accordion group for Bespoke Concierge Preferences + Summary breakdown tray + Primary checkout action button",
+      "uiComponents": [
+        "Calendar Date Strip",
+        "Time Slot Selection Matrix",
+        "Concierge Preference Switcher",
+        "Beverage & Aromatherapy Selector",
+        "Booking Summary Drawer",
+        "Apple Pay / Card Authorization CTA Button"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Time Slot Selection Matrix",
+          "trigger": "Single tap on an available time chip",
+          "action": "Selects slot, deselects others, updates total summary drawer",
+          "feedback": "Haptic click, slot turns liquid gold background with black crisp typography"
+        },
+        {
+          "componentName": "Concierge Preference Switcher",
+          "trigger": "Toggle switch for 'Quiet Chair Mode'",
+          "action": "Saves preference to booking payload, notifies barber of low-conversation request",
+          "feedback": "Smooth toggle slide animation with subtle audio click feedback"
+        }
+      ],
+      "requiredData": [
+        "selectedStylistId",
+        "availableDates",
+        "timeSlots",
+        "conciergeBeverageMenu",
+        "scentOptions",
+        "servicePricingBreakdown",
+        "userSavedPayment"
+      ],
+      "loadingState": "Horizontal date pill skeletons, pulsing grid tiles for time slots",
+      "emptyState": "Date state: 'No open slots on selected date with this Master Stylist. Tap to view next available slot on Oct 24.'",
+      "errorState": "Modal dialog alert: 'The selected slot was just reserved by another client. Please choose an alternative time slot.'",
+      "successState": "Instant transition to full-screen processing overlay upon card/Apple Pay touch completion",
+      "mobileConsiderations": "Large thumb-friendly date pills; horizontal drag for time slots; dynamic keyboard offset when adding custom concierge notes"
+    },
+    {
+      "screenId": "screen_digital_receipt",
+      "screenName": "Luxury Confirmation Receipt Screen",
+      "purpose": "Provide high-end booking confirmation featuring animated VIP pass, calendar sync, GPS navigation integration, and appointment details.",
+      "userGoal": "Review final appointment ticket, save to native wallet/calendar, and get directions to the luxury lounge.",
+      "entryPoints": [
+        "Successful checkout completion from Precision Slot & Concierge Screen",
+        "Tap active booking card in Concierge Client Vault Screen"
+      ],
+      "exitActions": [
+        "Tap 'Add to Apple Wallet' -> Native Wallet Prompt",
+        "Tap 'Get Lounge Directions' -> Native Maps App",
+        "Tap 'Done / Return Home' -> Salon Showcase Screen"
+      ],
+      "layoutStructure": "Top animated confirmation seal + Centered floating digital ticket pass + Expandable appointment summary + Location map card + Action button stack",
+      "uiComponents": [
+        "Confirmation Header Badge",
+        "VIP Pass Ticket Card",
+        "Add to Apple Wallet Button",
+        "Add to Calendar Button",
+        "Interactive Maps Card",
+        "Reschedule / Modify Reservation Link"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "VIP Pass Ticket Card",
+          "trigger": "Tap card flip area",
+          "action": "Flips card 180 degrees to reveal dynamic entry QR code and valet parking verification",
+          "feedback": "Silky 300ms 3D flip animation with metallic shimmer reflection"
+        },
+        {
+          "componentName": "Add to Calendar Button",
+          "trigger": "Single tap",
+          "action": "Generates native calendar event file (.ics) and opens system confirmation prompt",
+          "feedback": "Success green checkmark state change on button with haptic double-tap pulse"
+        }
+      ],
+      "requiredData": [
+        "bookingId",
+        "stylistName",
+        "stylistAvatar",
+        "serviceList",
+        "appointmentTimestamp",
+        "conciergePreferences",
+        "salonAddress",
+        "qrCodeValue",
+        "mapCoordinates"
+      ],
+      "loadingState": "Pulsing dark glassmorphism card placeholder with central spinning crown mark",
+      "emptyState": "Error screen fallback: 'Reservation record not found. Please contact concierge desk.'",
+      "errorState": "Toast message: 'Unable to sync to Calendar automatically. Card details saved to Vault.'",
+      "successState": "Golden particle burst visual animation on screen launch with subtle luxury chime sound profile",
+      "mobileConsiderations": "Automatic screen brightness boost when QR code pass is enlarged; single-tap native directions trigger; edge swipe disabled to prevent accidental dismissal"
+    },
+    {
+      "screenId": "screen_client_vault",
+      "screenName": "Concierge Client Vault Screen",
+      "purpose": "Manage client grooming history, saved hair/beard formula notes, high-res transformation gallery, VIP tier status, and personal preferences.",
+      "userGoal": "Track grooming progress over time, reorder favorite services, and inspect personal VIP rewards.",
+      "entryPoints": [
+        "Bottom Navigation: Vault Tab",
+        "Tap VIP Badge on Home Screen Header"
+      ],
+      "exitActions": [
+        "Tap 'Rebook This Look' -> Precision Slot & Concierge Screen",
+        "Tap Stylist Avatar -> Master Stylist Showcase Screen"
+      ],
+      "layoutStructure": "Header VIP Membership pass card + Status progress indicator + Tabbed vault content (Look Gallery, Cut History, Formula Notes, VIP Perks) + Vertical activity list",
+      "uiComponents": [
+        "VIP Membership Pass Card",
+        "Tier Progress Bar",
+        "Past Visit Timeline Cards",
+        "Style Formula Notes Card",
+        "Personal Photo Gallery Grid",
+        "Saved Barber Quick-Connect List"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Past Visit Timeline Cards",
+          "trigger": "Single tap on historical visit",
+          "action": "Expands card showing exact blade guard length used, beverage consumed, total spent, and stylist notes",
+          "feedback": "Accordion drop-down animation with smooth layout adjustment"
+        },
+        {
+          "componentName": "Personal Photo Gallery Grid",
+          "trigger": "Tap photo item",
+          "action": "Opens side-by-side comparison modal of past haircuts",
+          "feedback": "Haptic click with smooth modal zoom overlay"
+        }
+      ],
+      "requiredData": [
+        "clientName",
+        "vipTier",
+        "pointsBalance",
+        "nextTierThreshold",
+        "visitHistory",
+        "cutFormulaNotes",
+        "historicalPhotos",
+        "preferredBarbers"
+      ],
+      "loadingState": "Skeleton elements for header card, gray grid tiles for historical haircut photos",
+      "emptyState": "Empty Vault graphic with message: 'Your Vault is empty. Complete your inaugural booking to unlock style archiving and formula tracking.'",
+      "errorState": "Banner message: 'Vault sync delayed. Pull down to refresh your grooming records.'",
+      "successState": "Progress bar gold illumination animation when new VIP tier threshold is reached",
+      "mobileConsiderations": "Pull-to-refresh pull gesture; long-press photo to export to device camera roll; high-contrast reading layout for technical formula notes"
+    }
+  ],
+  "navigationFlows": [
+    {
+      "flowName": "Bespoke Barber Appointment Flow",
+      "trigger": "Client selects a Master Stylist from Home Screen or Stylist Showcase",
+      "sequence": [
+        "screen_home",
+        "screen_stylist_profile",
+        "screen_booking_picker",
+        "screen_digital_receipt"
+      ]
+    },
+    {
+      "flowName": "Express Rebook Flow",
+      "trigger": "Client taps 'Rebook Last Service' on Home Screen",
+      "sequence": [
+        "screen_home",
+        "screen_booking_picker",
+        "screen_digital_receipt"
+      ]
+    },
+    {
+      "flowName": "Vault Historic Rebook Flow",
+      "trigger": "Client selects a past haircut style from the Client Vault",
+      "sequence": [
+        "screen_client_vault",
+        "screen_booking_picker",
+        "screen_digital_receipt"
+      ]
+    }
+  ],
+  "globalRules": [
+    "Strict dark-mode default palette (Obsidian Black background, Champagne Gold accents, Warm Slate surfaces)",
+    "All interactive elements and touch targets must measure at least 48x48dp for premium touch ergonomics",
+    "Optimistic UI updates applied to all preference selections and time slot picks for latency-free interaction",
+    "Multi-tier tactile haptic engine: subtle light feedback for selection, medium crisp tick for slot highlight, heavy double pulse for booking confirmation",
+    "Offline caching enabled for Client Vault history, dynamic QR tickets, and saved style formula notes",
+    "Typography scale strictly enforced: Serif font family for titles/headings to convey luxury; Sans-Serif font for UI body labels and numerical values"
+  ],
+  "sharedComponents": [
+    {
+      "name": "Luxury Header Bar",
+      "description": "Top persistent bar with brand identity crown logo, VIP status pill, and notification drawer icon.",
+      "usedInScreens": [
+        "screen_home",
+        "screen_client_vault"
+      ]
+    },
+    {
+      "name": "Master Stylist Card",
+      "description": "Standardized card UI displaying stylist portrait, title tier badge, star rating, and direct booking trigger.",
+      "usedInScreens": [
+        "screen_home",
+        "screen_stylist_profile"
+      ]
+    },
+    {
+      "name": "Concierge Preference Switcher",
+      "description": "Luxury control row featuring custom icons for beverage, soundscape, and conversation preferences.",
+      "usedInScreens": [
+        "screen_booking_picker",
+        "screen_digital_receipt",
+        "screen_client_vault"
+      ]
+    },
+    {
+      "name": "Golden Primary CTA Button",
+      "description": "High-contrast champagne gold button with subtle metallic gradient glow, bold typography, and press scale dynamic feedback.",
+      "usedInScreens": [
+        "screen_stylist_profile",
+        "screen_booking_picker",
+        "screen_digital_receipt"
+      ]
+    },
+    {
+      "name": "VIP Pass Ticket Card",
+      "description": "Glassmorphism pass card showing appointment details, barcode/QR code toggle, and calendar integration actions.",
+      "usedInScreens": [
+        "screen_digital_receipt",
+        "screen_client_vault"
+      ]
+    }
+  ],
+  "designRequirementsForStitch": {
+    "colorSemantics": [
+      "Obsidian Black (#0D0D0D) - Primary Background",
+      "Champagne Gold (#D4AF37) - Luxury Brand Accent & Active States",
+      "Velvet Navy (#1A2238) - VIP Tier Cards & Highlight Surfaces",
+      "Warm Slate (#1E1E24) - Secondary Card Backgrounds",
+      "Ivory White (#F9F8F6) - Primary Text & High-Contrast Headings",
+      "Muted Charcoal (#4A4A4A) - Borders & Inactive States",
+      "Emerald Gold (#2E5A44) - Confirmation & Success State Badge"
+    ],
+    "typographyGuidelines": "Luxury typographic hierarchy combining Classic Display Serif (e.g., Cinzel or Playfair Display) for titles, headings, and pricing figures with Clean Geometric Sans-Serif (e.g., SF Pro Display or Inter) for body text, form controls, and time slot indicators.",
+    "spacingAndGrid": "Rhythmic 8pt design grid system utilizing 8px, 16px, 24px, 32px, 48px, and 64px structural tokens with generous negative space to evoke an ultra-premium, high-end feel.",
+    "componentVariantsNeeded": [
+      "Golden CTA Button (Default, Hover/Focus, Pressed (0.96x), Disabled, Loading Spinner)",
+      "Time Slot Chip (Available, Selected-Gold, Reserved-Disabled, Recommended)",
+      "Concierge Toggle Switch (Active Gold, Inactive Charcoal, Disabled)",
+      "Stylist Profile Card (Compact Horizontal, Full Vertical Showcase, Minimal Vault Strip)",
+      "Input Field (Default Dark Glass, Focused Gold Border, Validated Checkmark, Error Alert Red)"
+    ],
+    "motionAndMicroInteractions": [
+      "Silky smooth modal slide-ups using a custom cubic-bezier timing curve (300ms cubic-bezier(0.25, 1, 0.5, 1))",
+      "Subtle 3D ticket flip rotation (180deg flip, 350ms duration) for digital VIP QR receipts",
+      "Golden border pulse animation when tapping high-priority actions like Quick Rebook or Time Slot selection",
+      "Skeleton shimmer effect utilizing a luxury muted golden-slate wave pattern for loading states"
+    ]
+  },
+  "generatedAt": "2026-08-31T19:18:14.289Z"
+}

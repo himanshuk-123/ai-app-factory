@@ -24,7 +24,7 @@ export class MobileGeneratorAgent {
   ): Promise<MobileGeneratorResult | null> {
     if (validationResult?.recommendation === 'REJECT') {
       console.log(`[MobileGeneratorAgent] Skipping Mobile Generation because Idea Validation recommendation is "REJECT".`);
-      await stateManager.updateState({
+      await stateManager?.updateState({
         mobileGenerationSkipped: true,
         skipReason: 'Idea Validation rejected the product idea.',
       });
@@ -32,8 +32,8 @@ export class MobileGeneratorAgent {
     }
 
     console.log(`[MobileGeneratorAgent] Starting React Native (Expo) Application generation for project "${projectId}"...`);
-    await stateManager.updateStatus('IN_PROGRESS');
-    await stateManager.updateStage('MOBILE_GENERATION');
+    await stateManager?.updateStatus('IN_PROGRESS');
+    await stateManager?.updateStage('MOBILE_GENERATION');
 
     // Load specs from files if not passed directly
     let productData = specResult;
@@ -180,10 +180,12 @@ export class MobileGeneratorAgent {
     const firstScreenTheme = stitchData?.screens?.find((s: any) => s.theme && Object.keys(s.theme).length > 0)?.theme;
 
     const primaryColor =
-      firstScreenTheme?.customColor ||
-      firstScreenTheme?.overridePrimaryColor ||
-      firstScreenTheme?.namedColors?.primary_container ||
+      firstScreenTheme?.overrideSecondaryColor ||
+      firstScreenTheme?.namedColors?.secondary ||
+      firstScreenTheme?.namedColors?.secondary_fixed ||
+      firstScreenTheme?.overrideTertiaryColor ||
       firstScreenTheme?.namedColors?.primary ||
+      (firstScreenTheme?.customColor && firstScreenTheme.customColor !== '#0b0b0e' ? firstScreenTheme.customColor : null) ||
       '#38bdf8';
 
     const bgMain =
@@ -783,8 +785,8 @@ const styles = StyleSheet.create({
 
     // Update project.json state
     if (validationSuccess) {
-      await stateManager.updateStage('MOBILE_GENERATION_COMPLETED');
-      await stateManager.updateState({
+      await stateManager?.updateStage('MOBILE_GENERATION_COMPLETED');
+      await stateManager?.updateState({
         mobileGenerationComplete: true,
         mobileProjectPath: `projects/${projectId}/mobile`,
         mobileScreenCount: screens.length,
@@ -792,8 +794,8 @@ const styles = StyleSheet.create({
       });
       console.log(`[MobileGeneratorAgent] React Native (Expo) Application generated and validated successfully at: ${mobileDir}`);
     } else {
-      await stateManager.updateStage('MOBILE_GENERATION_FAILED');
-      await stateManager.updateState({
+      await stateManager?.updateStage('MOBILE_GENERATION_FAILED');
+      await stateManager?.updateState({
         mobileGenerationComplete: false,
         mobileValidationSuccess: false,
         mobileValidationError: validationError,

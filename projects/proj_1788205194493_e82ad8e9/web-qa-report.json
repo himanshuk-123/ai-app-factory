@@ -1,0 +1,60 @@
+{
+  "projectId": "proj_1788205194493_e82ad8e9",
+  "appName": "PaceStudent",
+  "webProjectPath": "projects/proj_1788205194493_e82ad8e9/web",
+  "buildResult": "SUCCESS",
+  "serverResult": "SUCCESS",
+  "previewPort": 4173,
+  "routesTested": [
+    {
+      "path": "/",
+      "name": "Dashboard",
+      "status": "PASSED",
+      "statusCode": 200
+    },
+    {
+      "path": "/add-expense",
+      "name": "Add Expense",
+      "status": "PASSED",
+      "statusCode": 200
+    },
+    {
+      "path": "/analytics",
+      "name": "Analytics & Reports",
+      "status": "PASSED",
+      "statusCode": 200
+    },
+    {
+      "path": "/settings",
+      "name": "Settings & Profile",
+      "status": "PASSED",
+      "statusCode": 200
+    }
+  ],
+  "navigationTests": [
+    {
+      "from": "/",
+      "to": "/add-expense",
+      "result": "PASSED"
+    },
+    {
+      "from": "/",
+      "to": "/analytics",
+      "result": "PASSED"
+    },
+    {
+      "from": "/",
+      "to": "/settings",
+      "result": "PASSED"
+    }
+  ],
+  "runtimeErrors": [],
+  "validationResults": {
+    "dependencies": "PASSED",
+    "typescript": "PASSED",
+    "productionBuild": "PASSED",
+    "serverHealth": "PASSED"
+  },
+  "overallQaStatus": "PASSED",
+  "generatedAt": "2026-08-31T19:49:03.480Z"
+}

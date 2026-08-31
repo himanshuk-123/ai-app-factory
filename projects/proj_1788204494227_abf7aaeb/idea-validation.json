@@ -1,0 +1,23 @@
+{
+  "projectId": "proj_1788204494227_abf7aaeb",
+  "idea": "Build CrownCut, a luxury barber salon booking app with haircut & beard service menu, master stylist selection, appointment time slot picker, and booking receipt confirmation",
+  "problem": "High-end salon clients experience friction and lack of exclusivity when booking premium barbers, while luxury barbershops lack specialized digital tools tailored to white-glove, VIP grooming experiences.",
+  "targetUsers": [
+    "Affluent urban professionals seeking high-end male grooming",
+    "Luxury barbershop owners and independent master stylists",
+    "Executive clientele requiring priority scheduling and discreet services"
+  ],
+  "valueProposition": "A white-glove booking experience designed specifically for high-end barbershops, pairing clients with elite stylists through custom service menus, instant slot availability, and digital VIP receipts.",
+  "competitionAssessment": "The market is heavily saturated with mature competitors like Squire, Booksy, Mindbody, and Vagaro. Squire specifically dominates the barbershop vertical with comprehensive shop management tools.",
+  "differentiation": "Focusing exclusively on the ultra-luxury market with features like concierge booking, membership access, customized client profile notes (drink preferences, past styles), and high-ticket packages.",
+  "technicalFeasibility": "Very high feasibility. Core features involve standard calendar scheduling, payment processor integration (Stripe/Square), transactional messaging, and real-time availability sync.",
+  "monetizationPotential": "Moderate. Can operate on a B2B SaaS subscription for barbershops (tiered per chair), plus optional transaction fees on deposit payments or premium client membership fees.",
+  "keyRisks": [
+    "High market saturation and established incumbents (e.g., Squire) with deep barbershop distribution",
+    "High acquisition costs and long sales cycles to convince barbershops to switch existing ERP/booking software",
+    "Low defensibility if features remain standard baseline booking functionality without deep vertical luxury integration"
+  ],
+  "score": 6.2,
+  "recommendation": "MODIFY",
+  "validatedAt": "2026-08-31T19:28:23.690Z"
+}

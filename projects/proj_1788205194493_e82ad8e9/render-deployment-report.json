@@ -1,0 +1,15 @@
+{
+  "projectId": "proj_1788205194493_e82ad8e9",
+  "appName": "PaceStudent",
+  "githubRepoUrl": "https://github.com/himanshuk-123/app-factory-pacestudent",
+  "serviceId": "srv-da8dsudg1s2s7394iegg",
+  "deploymentId": "dep-daatlf3tqb8s73b699v0",
+  "deploymentStatus": "COMPLETED",
+  "liveUrl": "https://pacestudent-web.onrender.com",
+  "deploymentDurationMs": 18047,
+  "deploymentErrors": [],
+  "healthCheckResult": "PASSED",
+  "requiresSetup": false,
+  "setupRequiredMessage": null,
+  "generatedAt": "2026-08-31T19:49:34.041Z"
+}

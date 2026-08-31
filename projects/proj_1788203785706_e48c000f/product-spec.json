@@ -1,0 +1,207 @@
+{
+  "projectId": "proj_1788203785706_e48c000f",
+  "idea": "Build CrownCut, a luxury barber salon booking app with haircut & beard service menu, master stylist selection, appointment time slot picker, and booking receipt confirmation",
+  "appName": "CrownCut",
+  "tagline": "Bespoke Grooming & Master Barber Booking for the Modern Gentleman",
+  "targetAudience": "High-net-worth clients seeking premium, white-glove salon experiences, alongside boutique grooming lounges, luxury barbershops, and elite master stylists requiring an elevated digital presence.",
+  "mvpFeatures": [
+    {
+      "name": "Bespoke Service Menu",
+      "description": "Tailored grooming service selection (haircut, beard sculpting, luxury hot-towel treatment) featuring transparent tier pricing and customizable consultation durations.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Master Stylist Showcase",
+      "description": "Individual barber portfolios showcasing high-res galleries, credentials, specialties, ratings, and tiered pricing based on stylist seniority.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Precision Slot & Concierge Picker",
+      "description": "Real-time calendar engine allowing exact time selection with options to lock in beverage preferences (e.g., Single Malt, Espresso) and scalp sensitivities prior to arrival.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Luxury Digital Receipt & Calendar Sync",
+      "description": "Sleek, high-contrast confirmation receipt with 1-click Google/Apple Calendar integration, direct map navigation, and instant booking summary.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Concierge Client Vault",
+      "description": "Personalized client profile recording visual haircut history notes, preferred styles, and bespoke service tags for seamless repeat bookings.",
+      "priority": "HIGH"
+    }
+  ],
+  "futureFeatures": [
+    {
+      "name": "VIP Retainer & Grooming Subscriptions",
+      "description": "Monthly recurring membership engine granting priority slot booking, unlimited touch-ups, and exclusive salon lounge access.",
+      "phase": "Phase 2"
+    },
+    {
+      "name": "White-Label Brand Customization",
+      "description": "Custom salon branding capabilities allowing elite barbershop chains to feature their own logos, custom themes, and exclusive domain integration.",
+      "phase": "Phase 2"
+    },
+    {
+      "name": "In-App Stylist Consultation Chat",
+      "description": "Direct, secure messaging between clients and master stylists for pre-service image sharing and custom style consultations.",
+      "phase": "Phase 3"
+    }
+  ],
+  "userPersonas": [
+    {
+      "name": "Julian - C-Suite Executive",
+      "role": "High-End Client",
+      "painPoints": [
+        "Frustrated by mass-market booking apps with cheap, utilitarian design",
+        "Dislikes repeating haircut specifications and drink choices on every visit",
+        "Requires tight, reliable scheduling that syncs with personal assistant calendars"
+      ],
+      "goals": [
+        "Book a top-tier master stylist in under 30 seconds with total confidence",
+        "Experience a white-glove, tailored service with preferred drink ready upon arrival",
+        "Maintain a polished appearance via recurring priority slots"
+      ]
+    },
+    {
+      "name": "Marcus - Salon Founder & Master Barber",
+      "role": "Luxury Salon Owner",
+      "painPoints": [
+        "Generic booking platforms undermine his salon's high-end brand identity",
+        "Marketplace apps charge high commissions and attempt to redirect his loyal client data",
+        "Inability to easily set tiered pricing for senior vs junior barbers"
+      ],
+      "goals": [
+        "Present an ultra-premium digital storefront matching his salon's gold-standard aesthetic",
+        "Retain 100% ownership of high-net-worth client relationships and history",
+        "Maximize revenue through master stylist tier pricing and VIP memberships"
+      ]
+    }
+  ],
+  "userJourneys": [
+    {
+      "flowName": "Selecting Master Stylist & Booking Appointment",
+      "description": "The end-to-end journey for a client selecting a luxury service, customizing concierge preferences, and confirming an appointment.",
+      "steps": [
+        "Open CrownCut and view featured luxury service menu",
+        "Select desired service (e.g., 'Royal Cut & Beard Sculpt')",
+        "Browse Master Stylist portfolio carousel and select preferred barber",
+        "Pick precision time slot on the high-contrast interactive date picker",
+        "Specify concierge choices (Select complimentary beverage & enter hair preference note)",
+        "Confirm booking and save animated digital luxury receipt to calendar"
+      ]
+    },
+    {
+      "flowName": "Post-Service Stylist Log & Portfolio Update",
+      "description": "How a master stylist logs client notes and captures portfolio photos after a appointment.",
+      "steps": [
+        "Stylist opens CrownCut Barber Portal post-service",
+        "Accesses completed appointment card for the client",
+        "Uploads fresh haircut photos directly to client vault and public portfolio",
+        "Logs updated blade settings and scalp notes for the client's next visit"
+      ]
+    }
+  ],
+  "screens": [
+    {
+      "id": "screen_home",
+      "name": "Salon Showcase & Menu Screen",
+      "purpose": "Primary landing screen highlighting salon ambiance, featured grooming treatments, and quick rebooking shortcuts.",
+      "keyComponents": [
+        "Hero Salon Ambiance Banner",
+        "Service Category Selector Chips",
+        "Master Stylist Spotlight Carousel",
+        "1-Tap Rebook Quick Card"
+      ]
+    },
+    {
+      "id": "screen_stylist_profile",
+      "name": "Master Stylist Showcase Screen",
+      "purpose": "Displays detailed credentials, high-res lookbook galleries, customer ratings, and tier pricing for specific barbers.",
+      "keyComponents": [
+        "Stylist Bio & Seniority Tier Badge",
+        "High-Res Style Lookbook Grid",
+        "Specialized Skills Badges",
+        "Select Stylist & Continue FAB"
+      ]
+    },
+    {
+      "id": "screen_booking_picker",
+      "name": "Precision Slot & Concierge Screen",
+      "purpose": "Allows clients to select exact time slots and input bespoke concierge preferences prior to checkout.",
+      "keyComponents": [
+        "Interactive Dark-Mode Date Strip",
+        "Time Slot Availability Matrix",
+        "Concierge Beverage & Comfort Dropdown",
+        "Custom Scalp & Barber Notes Input"
+      ]
+    },
+    {
+      "id": "screen_digital_receipt",
+      "name": "Luxury Confirmation Receipt Screen",
+      "purpose": "Provides high-end confirmation with smooth animations, calendar integrations, and salon directions.",
+      "keyComponents": [
+        "Animated Gold Crown Confirmation Badge",
+        "Itemized Grooming Summary & Stylist Info",
+        "Add to Apple / Google Calendar Button",
+        "Concierge Map & Parking Guidance Link"
+      ]
+    },
+    {
+      "id": "screen_client_vault",
+      "name": "Concierge Client Vault Screen",
+      "purpose": "Manages client grooming history, saved preferences, past visit photos, and VIP memberships.",
+      "keyComponents": [
+        "Client Status Tier Badge",
+        "Saved Beverage & Care Preferences Card",
+        "Visual Haircut History Timeline",
+        "VIP Grooming Subscription Details"
+      ]
+    }
+  ],
+  "navigationStructure": {
+    "type": "Bottom Tab Bar + Stack Navigation",
+    "mainTabs": [
+      "Services",
+      "Stylists",
+      "Appointments",
+      "Vault"
+    ],
+    "routes": [
+      {
+        "name": "Services",
+        "screenId": "screen_home",
+        "description": "Main service menu and salon overview tab"
+      },
+      {
+        "name": "Stylists",
+        "screenId": "screen_stylist_profile",
+        "description": "Master stylist directory and portfolio showcase tab"
+      },
+      {
+        "name": "Booking",
+        "screenId": "screen_booking_picker",
+        "description": "Time slot and preference customization screen"
+      },
+      {
+        "name": "Receipt",
+        "screenId": "screen_digital_receipt",
+        "description": "Post-booking digital receipt and calendar sync view"
+      },
+      {
+        "name": "Vault",
+        "screenId": "screen_client_vault",
+        "description": "Personal grooming vault and past appointments profile tab"
+      }
+    ]
+  },
+  "techStack": {
+    "frontend": "React Native / Expo (TypeScript) with NativeWind & Reanimated for premium gold-accent UI animations",
+    "backend": "Node.js / Fastify (TypeScript) built with clean modular architecture",
+    "database": "PostgreSQL with Prisma ORM & Redis for real-time slot lock caching",
+    "auth": "Supabase Auth (Passwordless Magic Links & Apple Sign-In)",
+    "hosting": "AWS Elastic Beanstalk for API & Vercel for Web Admin Portal"
+  },
+  "monetizationModel": "B2B SaaS subscription model charged to salon owners (Monthly flat fee per active master stylist seat) plus optional zero-commission VIP Client Retainer management add-ons.",
+  "generatedAt": "2026-08-31T19:17:22.512Z"
+}

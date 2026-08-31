@@ -1,0 +1,13 @@
+{
+  "projectId": "proj_1788205194493_e82ad8e9",
+  "appName": "PaceStudent",
+  "mobileProjectPath": "projects/proj_1788205194493_e82ad8e9/mobile",
+  "screenCount": 1,
+  "generatedScreens": [
+    "DashboardScreen"
+  ],
+  "dependencyInstallSuccess": true,
+  "typeCheckSuccess": true,
+  "validationSuccess": true,
+  "generatedAt": "2026-08-31T19:44:09.762Z"
+}

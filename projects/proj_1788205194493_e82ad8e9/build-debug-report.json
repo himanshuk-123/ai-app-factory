@@ -1,0 +1,17 @@
+{
+  "projectId": "proj_1788205194493_e82ad8e9",
+  "appName": "PaceStudent",
+  "mobileProjectPath": "projects/proj_1788205194493_e82ad8e9/mobile",
+  "validationResults": {
+    "dependencyCheck": true,
+    "typeCheck": true,
+    "expoDoctorCheck": true,
+    "androidPrebuildCheck": true
+  },
+  "repairAttempts": [],
+  "errorsEncountered": [],
+  "fixesApplied": [],
+  "finalStatus": "SUCCESS",
+  "finalBuildLogs": "--- STAGE 1: DEPENDENCY CHECK ---\n[npm install] Output: up to date, audited 1132 packages in 13s\n\n157 packages are looking for funding\n  run `npm fund` for details\n\n31 vulnerabilities (1 low, 11 moderate, 18 high, 1 critical)\n\nTo address issues that do not require attention, run:\n  npm audit fix\n\nTo address all issues (including breaking changes), run:\n  npm audit fix --force\n\nRun `npm audit` for details.\n--- STAGE 2: TYPESCRIPT TYPE-CHECK ---\n[npx tsc --noEmit] Output: 0 errors\n--- STAGE 3: EXPO DOCTOR ---\n[Expo Doctor] Output: Running 17 checks on your project...\n17/17 checks passed. No issues detected!\n--- STAGE 4: ANDROID CONFIG & PREBUILD CHECK ---\n[npx expo config] Output: Valid app.json configuration\n",
+  "generatedAt": "2026-08-31T19:45:27.078Z"
+}

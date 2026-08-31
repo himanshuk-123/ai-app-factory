@@ -1,0 +1,15 @@
+{
+  "projectId": "proj_1788205194493_e82ad8e9",
+  "appName": "PaceStudent",
+  "mobileProjectPath": "projects/proj_1788205194493_e82ad8e9/mobile",
+  "buildId": "build_1788205608075",
+  "platform": "android",
+  "profile": "preview",
+  "buildStatus": "FAILED",
+  "buildDurationMs": 104417,
+  "errors": [
+    "EAS Build Failure: ★ eas-cli@23.1.0 is now available.\nTo upgrade, run:\nnpm install -g eas-cli\nProceeding with outdated version.\n\n"
+  ],
+  "warnings": [],
+  "generatedAt": "2026-08-31T19:48:32.489Z"
+}

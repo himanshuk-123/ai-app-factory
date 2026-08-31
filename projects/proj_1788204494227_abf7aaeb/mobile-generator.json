@@ -1,0 +1,18 @@
+{
+  "projectId": "proj_1788204494227_abf7aaeb",
+  "appName": "CrownCut",
+  "mobileProjectPath": "projects/proj_1788204494227_abf7aaeb/mobile",
+  "screenCount": 6,
+  "generatedScreens": [
+    "LoungeHomeScreen",
+    "StylistPortfolioScreen",
+    "ServiceConciergeScreen",
+    "SlotPickerScreen",
+    "VipReceiptScreen",
+    "BarberDashboardScreen"
+  ],
+  "dependencyInstallSuccess": true,
+  "typeCheckSuccess": true,
+  "validationSuccess": true,
+  "generatedAt": "2026-08-31T19:45:31.426Z"
+}

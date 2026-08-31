@@ -1,0 +1,88 @@
+{
+  "projectId": "proj_1788205194493_e82ad8e9",
+  "idea": "Build CrownCut, a luxury barber salon booking app with haircut & beard service menu, master stylist selection, appointment time slot picker, and booking receipt confirmation",
+  "appName": "PaceStudent",
+  "tagline": "Smart digital product solution.",
+  "targetAudience": "Target users not specified.",
+  "mvpFeatures": [
+    {
+      "name": "Core Feature",
+      "description": "Real-time term spending budget tracking.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Core Feature",
+      "description": "Split rent and utilities with campus flatmates.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Core Feature",
+      "description": "Quick scan receipts to log food & books.",
+      "priority": "MEDIUM"
+    },
+    {
+      "name": "Core Feature",
+      "description": "Round up spare change on purchases.",
+      "priority": "MEDIUM"
+    },
+    {
+      "name": "Core Feature",
+      "description": "Manage student profile and monthly limits.",
+      "priority": "LOW"
+    }
+  ],
+  "futureFeatures": [
+    {
+      "name": "Future Feature",
+      "description": "",
+      "phase": "Phase 2"
+    },
+    {
+      "name": "Future Feature",
+      "description": "",
+      "phase": "Phase 2"
+    },
+    {
+      "name": "Future Feature",
+      "description": "",
+      "phase": "Phase 2"
+    }
+  ],
+  "userPersonas": [
+    {
+      "name": "Alex Chen",
+      "role": "Engineering Student",
+      "painPoints": [],
+      "goals": [
+        "Stay within monthly allowance",
+        "Split rent accurately"
+      ]
+    }
+  ],
+  "userJourneys": [
+    {
+      "flowName": "Main User Flow",
+      "description": "",
+      "steps": [
+        "Open Dashboard",
+        "Tap Add Expense",
+        "Save Transaction"
+      ]
+    }
+  ],
+  "screens": [],
+  "navigationStructure": {
+    "type": "Bottom Tab Bar + Stack Navigation",
+    "mainTabs": [],
+    "routes": []
+  },
+  "techStack": {
+    "frontend": "React Native / Expo (TypeScript)",
+    "backend": "Node.js / Express (TypeScript)",
+    "database": "PostgreSQL / Prisma ORM",
+    "auth": "Supabase Auth / JWT",
+    "hosting": "Vercel / Render"
+  },
+  "monetizationModel": "Freemium with premium budget analytics",
+  "generatedAt": "2026-08-31T19:40:08.567Z"
+}

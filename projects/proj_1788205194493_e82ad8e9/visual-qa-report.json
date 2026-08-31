@@ -1,0 +1,16 @@
+{
+  "projectId": "proj_1788205194493_e82ad8e9",
+  "appName": "App",
+  "screensCompared": [],
+  "overallSimilarityScore": 0,
+  "totalIssuesCount": {
+    "critical": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "overallStatus": "FAILED",
+  "comparisonMethod": "Gemini Multimodal Vision Analysis",
+  "durationMs": 2,
+  "generatedAt": "2026-08-31T19:48:35.259Z"
+}

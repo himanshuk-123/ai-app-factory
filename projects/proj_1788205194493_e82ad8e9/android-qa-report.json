@@ -1,0 +1,23 @@
+{
+  "projectId": "proj_1788205194493_e82ad8e9",
+  "appName": "PaceStudent",
+  "deviceId": "QKFU5T95U44XINW4",
+  "deviceModel": "Redmi M2101K7BI",
+  "androidVersion": "13",
+  "apkTestedPath": "",
+  "packageName": "com.appfactory.pacestudent",
+  "automationFramework": "ADB-Semantic UIAutomator",
+  "installationResult": "FAILED",
+  "launchResult": "FAILED",
+  "screensTested": [],
+  "navigationResults": [],
+  "interactionResults": [],
+  "crashesAndErrors": [
+    "Could not locate compiled APK binary in \"projects/proj_1788205194493_e82ad8e9/artifacts/\". Stage 9 build must be completed first."
+  ],
+  "logcatLogPath": "projects/proj_1788205194493_e82ad8e9/qa/logs/adb_logcat.log",
+  "screenshotPaths": [],
+  "overallQaStatus": "FAILED",
+  "durationMs": 2761,
+  "generatedAt": "2026-08-31T19:48:35.255Z"
+}

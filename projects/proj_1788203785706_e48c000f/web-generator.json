@@ -1,0 +1,16 @@
+{
+  "projectId": "proj_1788203785706_e48c000f",
+  "appName": "CrownCut",
+  "webProjectPath": "projects/proj_1788203785706_e48c000f/web",
+  "screenCount": 5,
+  "generatedScreens": [
+    "HomeScreen",
+    "StylistProfileScreen",
+    "BookingPickerScreen",
+    "DigitalReceiptScreen",
+    "ClientVaultScreen"
+  ],
+  "buildSuccess": false,
+  "buildError": "Command failed: npm run build\n",
+  "generatedAt": "2026-08-31T19:27:49.892Z"
+}

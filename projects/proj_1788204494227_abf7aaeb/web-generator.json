@@ -1,0 +1,16 @@
+{
+  "projectId": "proj_1788204494227_abf7aaeb",
+  "appName": "CrownCut",
+  "webProjectPath": "projects/proj_1788204494227_abf7aaeb/web",
+  "screenCount": 6,
+  "generatedScreens": [
+    "LoungeHomeScreen",
+    "StylistPortfolioScreen",
+    "ServiceConciergeScreen",
+    "SlotPickerScreen",
+    "VipReceiptScreen",
+    "BarberDashboardScreen"
+  ],
+  "buildSuccess": true,
+  "generatedAt": "2026-08-31T19:45:26.190Z"
+}

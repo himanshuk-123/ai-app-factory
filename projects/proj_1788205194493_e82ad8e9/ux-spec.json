@@ -1,0 +1,17 @@
+{
+  "projectId": "proj_1788205194493_e82ad8e9",
+  "idea": "Build CrownCut, a luxury barber salon booking app with haircut & beard service menu, master stylist selection, appointment time slot picker, and booking receipt confirmation",
+  "appName": "PaceStudent",
+  "screens": [],
+  "navigationFlows": [],
+  "globalRules": [],
+  "sharedComponents": [],
+  "designRequirementsForStitch": {
+    "colorSemantics": [],
+    "typographyGuidelines": "Modern sans-serif type scale (Inter/Roboto)",
+    "spacingAndGrid": "8pt grid system (8px, 16px, 24px, 32px)",
+    "componentVariantsNeeded": [],
+    "motionAndMicroInteractions": []
+  },
+  "generatedAt": "2026-08-31T19:40:13.037Z"
+}

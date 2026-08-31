@@ -1,0 +1,56 @@
+{
+  "projectId": "proj_1788205194493_e82ad8e9",
+  "idea": "Build CrownCut, a luxury barber salon booking app with haircut & beard service menu, master stylist selection, appointment time slot picker, and booking receipt confirmation",
+  "targetMarket": "Target market not specified.",
+  "competitors": [],
+  "competitorFeatures": [],
+  "competitorPricing": "Freemium and monthly subscription models dominate.",
+  "userComplaints": [],
+  "marketGaps": [],
+  "differentiationOpportunities": [],
+  "monetizationOpportunities": [],
+  "marketRisks": [],
+  "sources": [
+    {
+      "title": "CrownCut - Barbershop Queue &amp; Appointment System - GitHub",
+      "url": "https://github.com/LukeAguilar04/CrownCut",
+      "snippet": "CrownCut - Barbershop Queue &amp; Appointment System MVP demo application for a barbershop with walk-in queue, appointments, service selection, and mock payments."
+    },
+    {
+      "title": "GitHub - Hasanakramprog/crowcuts",
+      "url": "https://github.com/Hasanakramprog/crowcuts",
+      "snippet": "1. 🧔 Customer App Real-Time Booking: View barber availability, select time slots, and instantly confirm appointments. Service Selection: Browse a curated catalog of services and add them to your cart. Dynamic Theming: Enjoy a stunning UI that flawlessly adapts to both Light and Dark modes with premium gold accents. Appointment Tracking: Manage upcoming and past appointments effortlessly."
+    },
+    {
+      "title": "How to build a booking app for your salon or barbershop in 2026",
+      "url": "https://rork.com/guides/salon-barbershop-booking-app",
+      "snippet": "Vagaro, Booksy, Square, GlossGenius, and Fresha all take a monthly fee, a cut of new-client bookings, or both. Here&#x27;s the custom booking-app pattern salon and barbershop owners are building in Rork in 2026 to keep their clients, their data, and their margins."
+    },
+    {
+      "title": "Build custom barbershop app, salon haircut app, grooming appointment ...",
+      "url": "https://www.fiverr.com/veggie_app/build-custom-barbershop-app-salon-haircut-app-grooming-appointment-booking-app",
+      "snippet": "I design high-end barbershop and salon apps that help barbers, stylists, and grooming lounges connect with their clients through easy appointment scheduling, barber profiles, ratings &amp; reviews, secure payments, push notifications, and calendar management."
+    },
+    {
+      "title": "How to Build a Salon Booking App: Features, Cost, and Process",
+      "url": "https://www.simpalm.com/blog/salon-booking-app-development-guide",
+      "snippet": "Booking a haircut used to mean calling the salon, hoping someone picked up, and hoping your preferred stylist had an open slot. Today, apps like Fresha, Vagaro, and StyleSeat let clients see real-time availability, pick a specific stylist, and book a service in under a minute, all without a phone call. This shift has turned salon booking into one of the most active corners of local services ..."
+    },
+    {
+      "title": "How to Build a Salon Booking App: Step-by-Step Guide",
+      "url": "https://www.spectricssolutions.com/blogs/how-to-build-a-salon-booking-app-step-by-step-guide/",
+      "snippet": "In today&#x27;s fast-paced digital world, convenience is king. Whether it&#x27;s ordering food, booking a cab, or scheduling a haircut, users expect seamless experiences right at their fingertips. This shift has made salon booking apps not just a luxury but a necessity for salons aiming to stay competitive and relevant. If you&#x27;re thinking about developing a salon booking app, this step-by-step ..."
+    },
+    {
+      "title": "Free Salon App Builder: Build Salon Booking Apps With AI",
+      "url": "https://www.appypie.com/salon-app-builder",
+      "snippet": "Build your salon booking app with Appy Pie&#x27;s AI salon app builder. Hair, nail, spa and barbershop apps with appointments, payments, push notifications. No code."
+    },
+    {
+      "title": "Barber Mobile App Templates - CodeCanyon",
+      "url": "https://codecanyon.net/category/mobile?term=barber",
+      "snippet": "Get 66 barber mobile app templates on CodeCanyon such as CutFX : Barber App - Manage Salon Bookings &amp; Slots, BeautyNest AI - Barber &amp; Salon App - Barber Appointment App - Hair Salon - Urban Service App, Barber Buddy - Barber UI Kit | Flutter 3.0 | Android | iOS | BloC | Clean architecture"
+    }
+  ],
+  "researchedAt": "2026-08-31T19:40:04.292Z"
+}

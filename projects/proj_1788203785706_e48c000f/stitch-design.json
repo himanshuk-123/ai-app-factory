@@ -1,0 +1,329 @@
+{
+  "projectId": "proj_1788203785706_e48c000f",
+  "appName": "CrownCut",
+  "stitchProjectId": "4979221418983623964",
+  "status": "SUCCESS",
+  "screens": [
+    {
+      "screenId": "screen_home",
+      "screenName": "Salon Showcase & Menu Screen",
+      "stitchScreenId": "screen_1788203995888",
+      "status": "GENERATED",
+      "previewUrl": "https://stitch.google.com/projects/4979221418983623964/screens/screen_1788203995888"
+    },
+    {
+      "screenId": "screen_stylist_profile",
+      "screenName": "Master Stylist Showcase Screen",
+      "stitchScreenId": "projects/4979221418983623964/screens/66934027bc3f423abb0c8ad38c7aba00",
+      "status": "GENERATED",
+      "previewUrl": "https://stitch.google.com/projects/4979221418983623964/screens/66934027bc3f423abb0c8ad38c7aba00",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1UElhmSWKkFNvJ-0JN0acRNCSF7lg08r0NE4_QnwMOix2eKw4g4ZwuO5LibBieqc8MIJ9mfaw_qY0YdAnMOodsEtf5Ryqi6Z0Cx_iZOab9iG_1AFXAFNr1Ls9E3KNFUVeDSI2Bj3AYNSOQwPIFlcxhbQRT6ViL8LbY1tRVtO9e1Z3LFdV90LnY6xMkcaks_BaJzWBzlkcMqhodoe448wm1SvACR8thht__w_NGyxfGYrLhbpA-P0R3Cdg",
+      "theme": {}
+    },
+    {
+      "screenId": "screen_booking_picker",
+      "screenName": "Precision Slot & Concierge Screen",
+      "stitchScreenId": "projects/4979221418983623964/screens/ba4ae3dcc9884cbeb8375b7dbccd1a0a",
+      "status": "GENERATED",
+      "previewUrl": "https://stitch.google.com/projects/4979221418983623964/screens/ba4ae3dcc9884cbeb8375b7dbccd1a0a",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1VHSdiLNsvXYFBBtYj8R_en15csJ9NT9VxcNndYK5uhHThgFO7U_WO5Zd6VfiVlb7iapA4nothW3I65h1mii4Ll5rMD66OkWwsiaJqbI7EJbDXA_16Xhc8ZjTdUkLsA-7tXO2awk0fUboIOdoPZN5nsH-Gq5BdKoAb0_4q6VQjgT2PwmOS5jre7ZK3gAIzcB_tqjiqO_cTMD1lVfFUNt7MuqmKK--Tn--2eacv1fynBxqwDV9-N3omWN64",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzQ1NmFkNTUxY2Q5MDQ5ODU4ZjMzYjA4MDg0NGEwYTE2EgsSBxCcofjQnhgYAZIBIwoKcHJvamVjdF9pZBIVQhM0OTc5MjIxNDE4OTgzNjIzOTY0&filename=&opi=96797242",
+      "theme": {
+        "bodyFont": "INTER",
+        "bodyFontFamily": "Inter",
+        "colorMode": "DARK",
+        "colorVariant": "FIDELITY",
+        "customColor": "#d4af37",
+        "font": "PLAYFAIR_DISPLAY",
+        "headlineFont": "PLAYFAIR_DISPLAY",
+        "headlineFontFamily": "Playfair Display",
+        "labelFont": "INTER",
+        "labelFontFamily": "Inter",
+        "namedColors": {
+          "background": "#16130b",
+          "error": "#ffb4ab",
+          "error_container": "#93000a",
+          "inverse_on_surface": "#343027",
+          "inverse_primary": "#735c00",
+          "inverse_surface": "#eae1d4",
+          "on_background": "#eae1d4",
+          "on_error": "#690005",
+          "on_error_container": "#ffdad6",
+          "on_primary": "#3c2f00",
+          "on_primary_container": "#554300",
+          "on_primary_fixed": "#241a00",
+          "on_primary_fixed_variant": "#574500",
+          "on_secondary": "#283046",
+          "on_secondary_container": "#adb4d1",
+          "on_secondary_fixed": "#131b30",
+          "on_secondary_fixed_variant": "#3e465e",
+          "on_surface": "#eae1d4",
+          "on_surface_variant": "#d0c5af",
+          "on_tertiary": "#303036",
+          "on_tertiary_container": "#45444b",
+          "on_tertiary_fixed": "#1b1b21",
+          "on_tertiary_fixed_variant": "#47464d",
+          "outline": "#99907c",
+          "outline_variant": "#4d4635",
+          "primary": "#f2ca50",
+          "primary_container": "#d4af37",
+          "primary_fixed": "#ffe088",
+          "primary_fixed_dim": "#e9c349",
+          "secondary": "#bec6e3",
+          "secondary_container": "#3e465e",
+          "secondary_fixed": "#dae2ff",
+          "secondary_fixed_dim": "#bec6e3",
+          "surface": "#16130b",
+          "surface_bright": "#3d392f",
+          "surface_container": "#231f17",
+          "surface_container_high": "#2d2a21",
+          "surface_container_highest": "#38342b",
+          "surface_container_low": "#1f1b13",
+          "surface_container_lowest": "#110e07",
+          "surface_dim": "#16130b",
+          "surface_tint": "#e9c349",
+          "surface_variant": "#38342b",
+          "tertiary": "#d0cdd6",
+          "tertiary_container": "#b4b2ba",
+          "tertiary_fixed": "#e4e1ea",
+          "tertiary_fixed_dim": "#c8c5cd"
+        },
+        "overridePrimaryColor": "#d4af37",
+        "overrideSecondaryColor": "#1a2238",
+        "overrideTertiaryColor": "#1e1e24",
+        "roundness": "ROUND_FOUR",
+        "spacing": {
+          "base": "8px",
+          "container-max": "1280px",
+          "gutter": "24px",
+          "lg": "24px",
+          "margin-mobile": "16px",
+          "md": "16px",
+          "sm": "8px",
+          "xl": "48px",
+          "xs": "4px",
+          "xxl": "80px"
+        },
+        "spacingScale": 2,
+        "typography": {
+          "body-lg": {
+            "fontFamily": "Inter",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28px"
+          },
+          "body-md": {
+            "fontFamily": "Inter",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          "display-lg": {
+            "fontFamily": "Playfair Display",
+            "fontSize": "64px",
+            "fontWeight": "700",
+            "letterSpacing": "-0.02em",
+            "lineHeight": "72px"
+          },
+          "display-lg-mobile": {
+            "fontFamily": "Playfair Display",
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "letterSpacing": "-0.01em",
+            "lineHeight": "48px"
+          },
+          "headline-lg": {
+            "fontFamily": "Playfair Display",
+            "fontSize": "32px",
+            "fontWeight": "600",
+            "lineHeight": "40px"
+          },
+          "headline-md": {
+            "fontFamily": "Playfair Display",
+            "fontSize": "24px",
+            "fontWeight": "500",
+            "lineHeight": "32px"
+          },
+          "headline-xl": {
+            "fontFamily": "Playfair Display",
+            "fontSize": "48px",
+            "fontWeight": "600",
+            "lineHeight": "56px"
+          },
+          "label-md": {
+            "fontFamily": "Inter",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "letterSpacing": "0.05em",
+            "lineHeight": "20px"
+          },
+          "label-sm": {
+            "fontFamily": "Inter",
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "letterSpacing": "0.03em",
+            "lineHeight": "16px"
+          }
+        }
+      }
+    },
+    {
+      "screenId": "screen_digital_receipt",
+      "screenName": "Luxury Confirmation Receipt Screen",
+      "stitchScreenId": "projects/4979221418983623964/screens/dddef882b6eb494bb441bdf55afe1ee0",
+      "status": "GENERATED",
+      "previewUrl": "https://stitch.google.com/projects/4979221418983623964/screens/dddef882b6eb494bb441bdf55afe1ee0",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzQ3MTdjODlmMjU2NTQyMTJiYjAzMThmZjA0MTFmZjYxEgsSBxCcofjQnhgYAZIBIwoKcHJvamVjdF9pZBIVQhM0OTc5MjIxNDE4OTgzNjIzOTY0&filename=&opi=96797242",
+      "theme": {}
+    },
+    {
+      "screenId": "screen_client_vault",
+      "screenName": "Concierge Client Vault Screen",
+      "stitchScreenId": "projects/4979221418983623964/screens/5782361623b24217b193e1792495cfb1",
+      "status": "GENERATED",
+      "previewUrl": "https://stitch.google.com/projects/4979221418983623964/screens/5782361623b24217b193e1792495cfb1",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1URdZF8wKvhW1hV4UP0E92UPmvTVTxjrRH-BC0WOOyq_g8L4lyuNwdqrXT9UP014bwoa2vmuUahWNyWGnbhYSUpTIkOURPDmPrFS3j08n1pzre5n3-VsZSk-4XTUCnJhJ3SBOlsqPQjluRTJ_3TBmP-JotRfiJ2w6_aJ47mmOHtn65iT4LmoRklrS8VlOz3kkmRDCQUXQIU84hrFsU6sNf4i-A4xcmbfJGRfQt3J0w6CuLSuxX0lPcwzwA",
+      "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzg1OWY4NWVhMjA1ZDQ1MjE4ZGZmMDI0ZWI2MDVjYWI5EgsSBxCcofjQnhgYAZIBIwoKcHJvamVjdF9pZBIVQhM0OTc5MjIxNDE4OTgzNjIzOTY0&filename=&opi=96797242",
+      "theme": {
+        "bodyFont": "INTER",
+        "bodyFontFamily": "Inter",
+        "colorMode": "DARK",
+        "colorVariant": "FIDELITY",
+        "customColor": "#d4af37",
+        "font": "PLAYFAIR_DISPLAY",
+        "headlineFont": "PLAYFAIR_DISPLAY",
+        "headlineFontFamily": "Playfair Display",
+        "labelFont": "INTER",
+        "labelFontFamily": "Inter",
+        "namedColors": {
+          "background": "#16130b",
+          "error": "#ffb4ab",
+          "error_container": "#93000a",
+          "inverse_on_surface": "#343027",
+          "inverse_primary": "#735c00",
+          "inverse_surface": "#eae1d4",
+          "on_background": "#eae1d4",
+          "on_error": "#690005",
+          "on_error_container": "#ffdad6",
+          "on_primary": "#3c2f00",
+          "on_primary_container": "#554300",
+          "on_primary_fixed": "#241a00",
+          "on_primary_fixed_variant": "#574500",
+          "on_secondary": "#283046",
+          "on_secondary_container": "#adb4d1",
+          "on_secondary_fixed": "#131b30",
+          "on_secondary_fixed_variant": "#3e465e",
+          "on_surface": "#eae1d4",
+          "on_surface_variant": "#d0c5af",
+          "on_tertiary": "#303036",
+          "on_tertiary_container": "#45444b",
+          "on_tertiary_fixed": "#1b1b21",
+          "on_tertiary_fixed_variant": "#47464d",
+          "outline": "#99907c",
+          "outline_variant": "#4d4635",
+          "primary": "#f2ca50",
+          "primary_container": "#d4af37",
+          "primary_fixed": "#ffe088",
+          "primary_fixed_dim": "#e9c349",
+          "secondary": "#bec6e3",
+          "secondary_container": "#3e465e",
+          "secondary_fixed": "#dae2ff",
+          "secondary_fixed_dim": "#bec6e3",
+          "surface": "#16130b",
+          "surface_bright": "#3d392f",
+          "surface_container": "#231f17",
+          "surface_container_high": "#2d2a21",
+          "surface_container_highest": "#38342b",
+          "surface_container_low": "#1f1b13",
+          "surface_container_lowest": "#110e07",
+          "surface_dim": "#16130b",
+          "surface_tint": "#e9c349",
+          "surface_variant": "#38342b",
+          "tertiary": "#d0cdd6",
+          "tertiary_container": "#b4b2ba",
+          "tertiary_fixed": "#e4e1ea",
+          "tertiary_fixed_dim": "#c8c5cd"
+        },
+        "overridePrimaryColor": "#d4af37",
+        "overrideSecondaryColor": "#1a2238",
+        "overrideTertiaryColor": "#1e1e24",
+        "roundness": "ROUND_FOUR",
+        "spacing": {
+          "base": "8px",
+          "container-max": "1280px",
+          "gutter": "24px",
+          "lg": "24px",
+          "margin-mobile": "16px",
+          "md": "16px",
+          "sm": "8px",
+          "xl": "48px",
+          "xs": "4px",
+          "xxl": "80px"
+        },
+        "spacingScale": 2,
+        "typography": {
+          "body-lg": {
+            "fontFamily": "Inter",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "28px"
+          },
+          "body-md": {
+            "fontFamily": "Inter",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          "display-lg": {
+            "fontFamily": "Playfair Display",
+            "fontSize": "64px",
+            "fontWeight": "700",
+            "letterSpacing": "-0.02em",
+            "lineHeight": "72px"
+          },
+          "display-lg-mobile": {
+            "fontFamily": "Playfair Display",
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "letterSpacing": "-0.01em",
+            "lineHeight": "48px"
+          },
+          "headline-lg": {
+            "fontFamily": "Playfair Display",
+            "fontSize": "32px",
+            "fontWeight": "600",
+            "lineHeight": "40px"
+          },
+          "headline-md": {
+            "fontFamily": "Playfair Display",
+            "fontSize": "24px",
+            "fontWeight": "500",
+            "lineHeight": "32px"
+          },
+          "headline-xl": {
+            "fontFamily": "Playfair Display",
+            "fontSize": "48px",
+            "fontWeight": "600",
+            "lineHeight": "56px"
+          },
+          "label-md": {
+            "fontFamily": "Inter",
+            "fontSize": "14px",
+            "fontWeight": "600",
+            "letterSpacing": "0.05em",
+            "lineHeight": "20px"
+          },
+          "label-sm": {
+            "fontFamily": "Inter",
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "letterSpacing": "0.03em",
+            "lineHeight": "16px"
+          }
+        }
+      }
+    }
+  ],
+  "designSystemApplied": true,
+  "generatedAt": "2026-08-31T19:27:24.646Z"
+}

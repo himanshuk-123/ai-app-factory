@@ -24,7 +24,7 @@ export class WebGeneratorAgent {
   ): Promise<WebGeneratorResult | null> {
     if (validationResult?.recommendation === 'REJECT') {
       console.log(`[WebGeneratorAgent] Skipping Web Generation because Idea Validation recommendation is "REJECT".`);
-      await stateManager.updateState({
+      await stateManager?.updateState({
         webGenerationSkipped: true,
         skipReason: 'Idea Validation rejected the product idea.',
       });
@@ -32,8 +32,8 @@ export class WebGeneratorAgent {
     }
 
     console.log(`[WebGeneratorAgent] Starting React Web Application generation for project "${projectId}"...`);
-    await stateManager.updateStatus('IN_PROGRESS');
-    await stateManager.updateStage('WEB_GENERATION');
+    await stateManager?.updateStatus('IN_PROGRESS');
+    await stateManager?.updateStage('WEB_GENERATION');
 
     // Load specs from files if not passed directly
     let productData = specResult;
@@ -161,10 +161,12 @@ export default defineConfig({
     const firstScreenTheme = stitchData?.screens?.find((s: any) => s.theme && Object.keys(s.theme).length > 0)?.theme;
 
     const primaryColor =
-      firstScreenTheme?.customColor ||
-      firstScreenTheme?.overridePrimaryColor ||
-      firstScreenTheme?.namedColors?.primary_container ||
+      firstScreenTheme?.overrideSecondaryColor ||
+      firstScreenTheme?.namedColors?.secondary ||
+      firstScreenTheme?.namedColors?.secondary_fixed ||
+      firstScreenTheme?.overrideTertiaryColor ||
       firstScreenTheme?.namedColors?.primary ||
+      (firstScreenTheme?.customColor && firstScreenTheme.customColor !== '#0b0b0e' ? firstScreenTheme.customColor : null) ||
       '#38bdf8';
 
     const bgMain =
@@ -590,7 +592,7 @@ export const ${componentName}: React.FC = () => {
           {/* Main Hero Card */}
           <div style={{ background: 'var(--bg-main)', padding: '20px', borderRadius: 'var(--radius)', border: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
             <div>
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', tracking: '0.05em', color: 'var(--primary)' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--primary)' }}>
                 Active Goal & Plan
               </span>
               <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginTop: '4px', color: 'var(--text-main)' }}>
@@ -606,13 +608,15 @@ export const ${componentName}: React.FC = () => {
             </div>
           </div>
 
-          {/* Interactive UI Component Cards */}
+          {/* Interactive Domain-Rich Feature Cards */}
           <div className="grid-2">
             {${JSON.stringify(s.uiComponents)}.map((comp, idx) => {
               const compLower = comp.toLowerCase();
-              const isAction = compLower.includes('button') || compLower.includes('cta') || compLower.includes('action');
+              const isBooking = compLower.includes('booking') || compLower.includes('slot') || compLower.includes('calendar') || compLower.includes('schedule') || compLower.includes('time');
+              const isService = compLower.includes('service') || compLower.includes('menu') || compLower.includes('haircut') || compLower.includes('price') || compLower.includes('package');
+              const isSpecialist = compLower.includes('barber') || compLower.includes('stylist') || compLower.includes('staff') || compLower.includes('specialist') || compLower.includes('team');
               const isChart = compLower.includes('chart') || compLower.includes('analytics') || compLower.includes('heatmap') || compLower.includes('streak');
-              const isMetric = compLower.includes('card') || compLower.includes('hero') || compLower.includes('score') || compLower.includes('gauge');
+              const isMetric = compLower.includes('card') || compLower.includes('hero') || compLower.includes('score') || compLower.includes('gauge') || compLower.includes('status');
 
               return (
                 <div
@@ -624,7 +628,7 @@ export const ${componentName}: React.FC = () => {
                     padding: '20px',
                     display: 'flex',
                     flexDirection: 'column',
-                    justify: 'space-between',
+                    justifyContent: 'space-between',
                     gap: '12px',
                     boxShadow: 'var(--shadow)',
                   }}
@@ -634,43 +638,81 @@ export const ${componentName}: React.FC = () => {
                       {comp}
                     </h4>
                     <span style={{ fontSize: '0.75rem', padding: '2px 8px', borderRadius: '12px', background: 'var(--bg-card-hover)', color: 'var(--primary)', fontWeight: 600 }}>
-                      Active
+                      Live Feature
                     </span>
                   </div>
 
-                  {isChart ? (
+                  {isService ? (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {[
+                        { title: 'Classic Haircut & Styling', price: '$35', time: '30 mins' },
+                        { title: 'Beard Trim & Hot Towel Shave', price: '$25', time: '20 mins' },
+                        { title: 'Executive Grooming Package', price: '$55', time: '50 mins' },
+                      ].map((item, i) => (
+                        <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', background: 'var(--bg-card)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                          <div>
+                            <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-main)' }}>{item.title}</div>
+                            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>⏱ {item.time}</div>
+                          </div>
+                          <div style={{ fontSize: '0.95rem', fontWeight: 800, color: 'var(--primary)' }}>{item.price}</div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : isSpecialist ? (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {[
+                        { name: 'Alex Rivera', role: 'Master Barber', rating: '4.9 ★ (120 reviews)' },
+                        { name: 'Marcus Chen', role: 'Fade & Styling Specialist', rating: '4.8 ★ (94 reviews)' },
+                      ].map((barber, i) => (
+                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px', background: 'var(--bg-card)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                          <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, color: '#0f172a' }}>
+                            {barber.name.charAt(0)}
+                          </div>
+                          <div style={{ flex: 1 }}>
+                            <div style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-main)' }}>{barber.name}</div>
+                            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{barber.role} • {barber.rating}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : isBooking ? (
+                    <div>
+                      <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '6px' }}>Select Available Time Slot:</div>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '10px' }}>
+                        {['09:00 AM', '10:30 AM', '01:15 PM', '03:45 PM', '05:00 PM'].map((slot, i) => (
+                          <span key={i} style={{ padding: '6px 12px', borderRadius: '6px', fontSize: '0.8rem', background: i === 1 ? 'var(--primary)' : 'var(--bg-card-hover)', color: i === 1 ? '#0f172a' : 'var(--text-main)', fontWeight: i === 1 ? 700 : 500, cursor: 'pointer' }}>
+                            {slot}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : isChart ? (
                     <div>
                       <div style={{ display: 'flex', alignItems: 'flex-end', gap: '8px', height: '60px', marginTop: '8px', marginBottom: '8px' }}>
                         {[40, 65, 30, 85, 95, 60, 75].map((h, i) => (
                           <div key={i} style={{ flex: 1, background: i === 4 ? 'var(--primary)' : 'var(--bg-card-hover)', height: \`\${h}%\`, borderRadius: '4px' }} />
                         ))}
                       </div>
-                      <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>7-Day Historical Analytics</span>
+                      <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Real-Time Activity Trends</span>
                     </div>
                   ) : isMetric ? (
                     <div>
                       <div style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--primary)', margin: '4px 0' }}>
-                        {idx % 2 === 0 ? 'Optimal (92/100)' : '4 Active Tasks'}
+                        {idx % 2 === 0 ? '98% Positive Feedback' : '$45 Average Ticket'}
                       </div>
                       <div style={{ width: '100%', height: '6px', background: 'var(--bg-card-hover)', borderRadius: '3px', overflow: 'hidden' }}>
-                        <div style={{ width: idx % 2 === 0 ? '92%' : '65%', height: '100%', background: 'var(--primary)' }} />
+                        <div style={{ width: idx % 2 === 0 ? '98%' : '75%', height: '100%', background: 'var(--primary)' }} />
                       </div>
                     </div>
                   ) : (
                     <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                      Interactive module providing live data updates and real-time user interaction.
+                      Interactive module with live state management and dynamic UI response.
                     </p>
                   )}
 
-                  {isAction ? (
-                    <button className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: '8px' }} onClick={() => setViewState('SUCCESS')}>
-                      ⚡ {comp}
-                    </button>
-                  ) : (
-                    <button className="btn btn-secondary" style={{ width: '100%', justifyContent: 'center', marginTop: '8px' }} onClick={() => setViewState('SUCCESS')}>
-                      View Details
-                    </button>
-                  )}
+                  <button className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: '8px' }} onClick={() => setViewState('SUCCESS')}>
+                    ⚡ Select & Continue
+                  </button>
                 </div>
               );
             })}
@@ -796,8 +838,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
     // Update project.json state
     if (buildSuccess) {
-      await stateManager.updateStage('WEB_GENERATION_COMPLETED');
-      await stateManager.updateState({
+      await stateManager?.updateStage('WEB_GENERATION_COMPLETED');
+      await stateManager?.updateState({
         webGenerationComplete: true,
         webProjectPath: `projects/${projectId}/web`,
         webScreenCount: screens.length,
@@ -805,8 +847,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       });
       console.log(`[WebGeneratorAgent] React Web Application generated and validated successfully at: ${webDir}`);
     } else {
-      await stateManager.updateStage('WEB_GENERATION_FAILED');
-      await stateManager.updateState({
+      await stateManager?.updateStage('WEB_GENERATION_FAILED');
+      await stateManager?.updateState({
         webGenerationComplete: false,
         webBuildSuccess: false,
         webBuildError: buildError,

@@ -1,0 +1,136 @@
+{
+  "projectId": "proj_1788203785706_e48c000f",
+  "idea": "Build CrownCut, a luxury barber salon booking app with haircut & beard service menu, master stylist selection, appointment time slot picker, and booking receipt confirmation",
+  "targetMarket": "Luxury barbershops, boutique grooming lounges, master stylists, and high-end clients seeking a bespoke, white-glove digital booking experience.",
+  "competitors": [
+    {
+      "name": "Booksy",
+      "overview": "Leading appointment booking platform for barbers and beauty professionals with a large consumer marketplace presence.",
+      "keyFeatures": [
+        "24/7 online booking",
+        "Calendar management",
+        "Integrated payment processing",
+        "Client marketing tools"
+      ],
+      "pricing": "Monthly subscription starting around $29.99/mo plus fees for new client marketplace leads.",
+      "complaints": "Generic consumer app aesthetic, marketplace takes aggressive commissions on new clients, limited luxury brand customization."
+    },
+    {
+      "name": "Fresha",
+      "overview": "Subscription-free salon and spa booking software utilizing a marketplace revenue commission model.",
+      "keyFeatures": [
+        "Zero subscription fees for core software",
+        "POS and calendar integration",
+        "Automated SMS/Email notifications"
+      ],
+      "pricing": "Free core software; 20% fee on first-time marketplace bookings plus payment card processing fees.",
+      "complaints": "High fees on recurring marketplace leads, rigid client interface branding, lack of dedicated white-label control."
+    },
+    {
+      "name": "Vagaro",
+      "overview": "Comprehensive business management software for salons, spas, and fitness centers.",
+      "keyFeatures": [
+        "Multi-location support",
+        "Payroll and inventory tracking",
+        "Custom branded app options (at higher tiers)"
+      ],
+      "pricing": "Starts at $25/mo per staff member plus add-on feature modules.",
+      "complaints": "Cluttered interface, outdated user experience for modern mobile clients, complex setup process."
+    },
+    {
+      "name": "GlossGenius",
+      "overview": "Sleek booking and business platform tailored to boutique beauty and grooming independent professionals.",
+      "keyFeatures": [
+        "Aesthetic web booking pages",
+        "Built-in text and email marketing",
+        "Flat-rate payment processing"
+      ],
+      "pricing": "$24 to $48/mo standard tiers with flat processing rates.",
+      "complaints": "Limited multi-barber enterprise tools and lacks tailored features for high-end master stylist salon hierarchies."
+    }
+  ],
+  "competitorFeatures": [
+    "Real-time appointment time slot selection",
+    "Barber / Master Stylist profile selection",
+    "Interactive service menu selection",
+    "Automated SMS and email reminders",
+    "Digital payment processing and pre-booking deposits"
+  ],
+  "competitorPricing": "Dominated by SaaS monthly subscriptions ranging from $25 to $50 per month per barber, alongside processing commissions (2.5%-3.5%) and client acquisition fees (up to 20%).",
+  "userComplaints": [
+    "Mass-market booking apps feature utilitarian design that undermines high-end luxury salon branding.",
+    "Unpredictable fees and marketplace commissions taking revenue from repeat clients.",
+    "Lack of tailored features to support tiered master stylist pricing and extended consultation times.",
+    "Inability to log bespoke client preferences (e.g. complimentary drink preference, custom scalp care notes)."
+  ],
+  "marketGaps": [
+    "Absence of dedicated luxury-first booking interfaces built for elite barbershops.",
+    "Lack of white-label mobile solutions keeping client relationship data exclusive to the shop.",
+    "Missing VIP retainer/membership management for high-net-worth recurring clientele."
+  ],
+  "differentiationOpportunities": [
+    "Premium UI/UX design with high-contrast dark modes, custom gold accents, and fluid animations.",
+    "Master Stylist Showcase with portfolio photo galleries, customized tier pricing, and direct consultations.",
+    "Concierge Client Profiles recording detailed haircut history, product preferences, and beverage choices.",
+    "Digital luxury receipts offering instant calendar sync, concierge directions, and referral perks."
+  ],
+  "monetizationOpportunities": [
+    "Tiered SaaS subscription for boutique barbershops (e.g., $49/mo to $199/mo per location).",
+    "White-label custom app branding and domain add-on fee.",
+    "Percentage-based transaction fee on VIP deposit payments and luxury add-on services.",
+    "Premium membership and client subscription management module fee."
+  ],
+  "marketRisks": [
+    "Market dominance and client network lock-in by established platforms like Booksy and Fresha.",
+    "Smaller addressable market size when targeting exclusively luxury/high-end barbershops.",
+    "Barber resistance to transferring established client histories and payment processing software."
+  ],
+  "sources": [
+    {
+      "title": "CrownCut - Barbershop Queue &amp; Appointment System - GitHub",
+      "url": "https://github.com/LukeAguilar04/CrownCut",
+      "snippet": "CrownCut - Barbershop Queue &amp; Appointment System MVP demo application for a barbershop with walk-in queue, appointments, service selection, and mock payments."
+    },
+    {
+      "title": "How to build a booking app for your salon or barbershop in 2026",
+      "url": "https://rork.com/guides/salon-barbershop-booking-app",
+      "snippet": "Vagaro, Booksy, Square, GlossGenius, and Fresha all take a monthly fee, a cut of new-client bookings, or both. Here&#x27;s the custom booking-app pattern salon and barbershop owners are building in Rork in 2026 to keep their clients, their data, and their margins."
+    },
+    {
+      "title": "How to Build a Salon Booking App: Features, Cost, and Process",
+      "url": "https://www.simpalm.com/blog/salon-booking-app-development-guide",
+      "snippet": "A salon booking app is a digital platform that lets clients view services, check stylist availability, and book an appointment without calling the salon directly."
+    },
+    {
+      "title": "A Complete Salon App Development Guide for 2026 - jploft.com",
+      "url": "https://www.jploft.com/blog/how-to-create-a-salon-app",
+      "snippet": "Explore a complete salon app development guide for 2026 with features, a step-by-step process, a cost breakdown, and trends to build a scalable app."
+    },
+    {
+      "title": "How to Build a Booking App: The Complete 2026 Guide",
+      "url": "https://skyward-agency.com/en/build-booking-app-2026-guide/",
+      "snippet": "Build a booking app, and you&#x27;re essentially designing a digital tool that lets clients book a time slot online, complete with calendar syncing, payment processing, and automated reminders. A typical project takes 4 to 9 months and costs between €15,000 and €80,000, depending on the architecture you choose."
+    },
+    {
+      "title": "Barber Mobile App Templates - CodeCanyon",
+      "url": "https://codecanyon.net/category/mobile?term=barber",
+      "snippet": "Get 66 barber mobile app templates on CodeCanyon such as CutFX : Barber App - Manage Salon Bookings &amp; Slots, BeautyNest AI - Barber &amp; Salon App - Barber Appointment App - Hair Salon - Urban Service App, Barber Buddy - Barber UI Kit | Flutter 3.0 | Android | iOS | BloC | Clean architecture"
+    },
+    {
+      "title": "CrownCut/README.md at main · LukeAguilar04/CrownCut · GitHub",
+      "url": "https://github.com/LukeAguilar04/CrownCut/blob/main/README.md",
+      "snippet": "# CrownCut - Barbershop Queue &amp; Appointment System MVP demo application for a barbershop with walk-in queue, appointments, service selection, and mock payments."
+    },
+    {
+      "title": "GitHub - Hasanakramprog/crowcuts",
+      "url": "https://github.com/Hasanakramprog/crowcuts",
+      "snippet": "1. 🧔 Customer App Real-Time Booking: View barber availability, select time slots, and instantly confirm appointments. Service Selection: Browse a curated catalog of services and add them to your cart. Dynamic Theming: Enjoy a stunning UI that flawlessly adapts to both Light and Dark modes with premium gold accents. Appointment Tracking: Manage upcoming and past appointments effortlessly."
+    },
+    {
+      "title": "crowcuts/README.md at main · Hasanakramprog/crowcuts · GitHub",
+      "url": "https://github.com/Hasanakramprog/crowcuts/blob/main/README.md",
+      "snippet": "1. 🧔 Customer App Real-Time Booking: View barber availability, select time slots, and instantly confirm appointments. Service Selection: Browse a curated catalog of services and add them to your cart. Dynamic Theming: Enjoy a stunning UI that flawlessly adapts to both Light and Dark modes with premium gold accents. Appointment Tracking: Manage upcoming and past appointments effortlessly."
+    }
+  ],
+  "researchedAt": "2026-08-31T19:16:59.187Z"
+}
