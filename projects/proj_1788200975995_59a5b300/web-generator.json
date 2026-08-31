@@ -1,0 +1,15 @@
+{
+  "projectId": "proj_1788200975995_59a5b300",
+  "appName": "QuickBite: Dorm Eats & Timers",
+  "webProjectPath": "projects/proj_1788200975995_59a5b300/web",
+  "screenCount": 5,
+  "generatedScreens": [
+    "OnboardingScreen",
+    "DashboardScreen",
+    "RecipeDetailScreen",
+    "CookingTimerScreen",
+    "GroceryListScreen"
+  ],
+  "buildSuccess": true,
+  "generatedAt": "2026-08-31T18:39:25.701Z"
+}

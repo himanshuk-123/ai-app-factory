@@ -1,0 +1,14 @@
+{
+  "projectId": "proj_1788202621341_48547300",
+  "appName": "ForgeFit AI",
+  "webProjectPath": "projects/proj_1788202621341_48547300/web",
+  "screenCount": 4,
+  "generatedScreens": [
+    "DashboardScreen",
+    "ActiveWorkoutScreen",
+    "RoutineBuilderScreen",
+    "AnalyticsScreen"
+  ],
+  "buildSuccess": true,
+  "generatedAt": "2026-08-31T19:03:32.936Z"
+}

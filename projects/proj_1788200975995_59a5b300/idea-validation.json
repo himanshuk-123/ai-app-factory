@@ -1,0 +1,22 @@
+{
+  "projectId": "proj_1788200975995_59a5b300",
+  "idea": "Build QuickBite, a student meal planner app with dorm recipes and cooking timers",
+  "problem": "College students living in dorms often lack proper kitchen appliances, cooking experience, time, and budget, leading to unhealthy eating habits and overspending on food delivery.",
+  "targetUsers": [
+    "University students living in residence halls with restricted cooking setups",
+    "First-time independent young adults on strict budgets with limited kitchen skills"
+  ],
+  "valueProposition": "A hyper-localized meal planning and recipe app specifically designed for micro-kitchens and dorm appliances (microwaves, mug meals, air fryers) featuring budget tracking and integrated cooking timers.",
+  "competitionAssessment": "General meal planning apps (Mealime, Yummly, Tasty) and budget recipe blogs (Budget Bytes) exist, but none exclusively focus on low-equipment, dorm-safe constraint filtering alongside native interactive timers.",
+  "differentiation": "Strict appliance-based filtering (e.g., microwave-only, kettle-only), automatic grocery budget capping per recipe, and built-in multi-timer flows tailored for quick dorm prep.",
+  "technicalFeasibility": "High feasibility. Standard mobile app architecture (React Native/Flutter) with straightforward database requirements for recipes, local notification APIs for timers, and low infrastructure costs.",
+  "monetizationPotential": "Moderate to low directly from users due to high price sensitivity of students. Best monetized via freemium tiers, grocery delivery affiliate links (Instacart/Walmart), and targeted brand sponsorships.",
+  "keyRisks": [
+    "Low willingness to pay among the target college demographic",
+    "High user churn as students graduate or move into full apartments",
+    "Strong competition from free visual cooking content on TikTok and YouTube"
+  ],
+  "score": 6.8,
+  "recommendation": "MODIFY",
+  "validatedAt": "2026-08-31T18:29:47.635Z"
+}

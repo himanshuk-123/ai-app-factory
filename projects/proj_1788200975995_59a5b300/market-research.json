@@ -1,0 +1,130 @@
+{
+  "projectId": "proj_1788200975995_59a5b300",
+  "idea": "Build QuickBite, a student meal planner app with dorm recipes and cooking timers",
+  "targetMarket": "College and university students living in dormitories or shared student housing with limited kitchen equipment (e.g., microwaves, mini-fridges, kettles), tight weekly budgets, limited cooking experience, and high time constraints during academic terms.",
+  "competitors": [
+    {
+      "name": "BiteKit (AI College Student Meal Planner)",
+      "overview": "An AI-powered meal planner designed specifically for college students to generate weekly plans based on dorm equipment and budget.",
+      "keyFeatures": [
+        "Equipment-based recipe filtering (dorm-friendly)",
+        "Real food pricing data integration",
+        "Dorm storage tips and grocery list generation",
+        "Dining hall strategy suggestions"
+      ],
+      "pricing": "Freemium model with premium AI meal plan generation",
+      "complaints": "Limited interactive cooking tools like step-by-step timers; AI suggestions can occasionally suggest hard-to-find ingredients."
+    },
+    {
+      "name": "QuickBite AI / Fridge-to-Plate Generators",
+      "overview": "Lightweight AI recipe apps focused on generating 5-minute meals from existing fridge ingredients.",
+      "keyFeatures": [
+        "Pantry/fridge inventory meal generator",
+        "5-minute quick recipe focus",
+        "Ultra-simplified UI"
+      ],
+      "pricing": "Free base version; optional premium features",
+      "complaints": "Lacks comprehensive week-long meal planning, meal prep tracking, and dedicated built-in cooking timers."
+    },
+    {
+      "name": "Generic Meal Planners (e.g., Mealime, Paprika)",
+      "overview": "Mainstream meal planning and grocery list apps built for general consumers and families.",
+      "keyFeatures": [
+        "Calorie and macronutrient tracking",
+        "Automated grocery list generation",
+        "Large recipe catalog with diet filters"
+      ],
+      "pricing": "Free tiers with premium subscriptions ranging from $2.99 to $5.99/month",
+      "complaints": "Assumes full kitchen access (stoves, ovens, food processors), high ingredient counts leading to food waste, and expensive grocery totals."
+    }
+  ],
+  "competitorFeatures": [
+    "AI recipe generation from available fridge ingredients",
+    "Automated grocery list creation",
+    "Nutritional and calorie tracking",
+    "Basic dietary constraint filters (vegan, gluten-free, low-budget)",
+    "Weekly meal plan calendars"
+  ],
+  "competitorPricing": "Predominantly freemium. Basic tiers are free with ads or limited recipe generations, while premium tiers range from $2.99 to $7.99/month for unlimited AI prompts, custom macro targets, and grocery delivery integrations.",
+  "userComplaints": [
+    "Recipes standardly assume access to a full kitchen with stoves, ovens, and extensive cookware.",
+    "Grocery lists require buying bulk ingredients that spoil quickly in small mini-fridges.",
+    "Overly complex cooking steps that take too long for busy student schedules.",
+    "Lack of integrated, multi-step timers specifically calibrated for dorm appliances like microwaves or air fryers.",
+    "Failure to account for hybrid dining (combining campus meal swipes with dorm cooking)."
+  ],
+  "marketGaps": [
+    "Absence of appliance-specific interactive cooking timers tailored for microwave prep, mug meals, and kettle boiling.",
+    "Lack of mini-fridge volume optimization to minimize food waste in cramped living spaces.",
+    "No seamless integration combining dining hall meal credits with supplemental dorm cooking."
+  ],
+  "differentiationOpportunities": [
+    "Dedicated Dorm-Appliance Cooking Timers: Integrated multi-stage timers optimized for microwave power levels, hot plates, and air fryers.",
+    "Strict Equipment Mode: Filter recipes strictly by available tools (e.g., 'Microwave Only', 'Electric Kettle Only', 'No Prep/No Cook').",
+    "Mini-Fridge & Budget Guardrails: Limit recipe ingredient counts to 5 items or fewer, maximizing ingredient reuse across the week.",
+    "Campus Dining Hall Hybrid Planner: Mix dining hall visits with quick dorm meals to stretch campus meal credits."
+  ],
+  "monetizationOpportunities": [
+    "Freemium Subscription ('QuickBite Pro'): $2.99/month or $19.99/year for unlimited AI recipe generation, custom timers, and meal plan exports.",
+    "Affiliate Partnerships: Grocery delivery integrations (e.g., Instacart, Walmart Grocery) with student discounts.",
+    "Brand Partnerships: Sponsored student-friendly ingredients or cookware promotions (e.g., instant ramen upgrades, air fryer brands)."
+  ],
+  "marketRisks": [
+    "Low Willingness to Pay: College students are highly price-sensitive and may default to free platforms like TikTok, YouTube, or Reddit for dorm recipes.",
+    "High Churn Rate: Strong seasonal usage patterns tied to the academic calendar, leading to cancellations during summer and winter breaks.",
+    "Appliance Policy Variance: Dorm room appliance rules vary widely across universities, requiring flexible customization."
+  ],
+  "sources": [
+    {
+      "title": "Best Free Meal Planning Apps for College Students 2026",
+      "url": "https://becute.app/blog/best-free-meal-planning-apps-college-students-2026",
+      "snippet": "Discover the top free meal planning apps that help college students eat healthy on a budget. Compare features, find the perfect app for your dorm lifestyle."
+    },
+    {
+      "title": "QuickBite - AI Recipe App for Students",
+      "url": "https://quickbite.cc/",
+      "snippet": "Turn what&#x27;s in your fridge into dinner with AI. Quick, cheap, and stress-free meals for college students."
+    },
+    {
+      "title": "Meal Planner Apps for Students in 2026 | BeCute",
+      "url": "https://becute.app/blog/meal-planner-students-top-5-apps-simplify-diet",
+      "snippet": "Home Blog Meal Planner Apps for Students: What to Use in 2026 Meal Planner Apps for Students: What to Use in 2026 Discover the best meal planner apps for students in 2026. Save money, eat healthier, and manage your time with these top-rated food tracking tools."
+    },
+    {
+      "title": "10 Best Meal Planning Apps for 2026 (Compared) - haznos.org",
+      "url": "https://haznos.org/2026/best-meal-planning-app-2026/",
+      "snippet": "The 10 best meal planning apps in 2026 for families, students, and weight goals. Covers free and paid options with grocery lists and calorie tracking."
+    },
+    {
+      "title": "Experts Rank 5 Apps That Dominate Meal Planning",
+      "url": "https://pantrybasics.online/experts-rank-5-apps-that-dominate-meal-planning/",
+      "snippet": "Experts Rank 5 Apps That Dominate Meal Planning In 2024, a campus health survey revealed that a large majority of students skip breakfast because they can&#x27;t afford or plan their meals. One app is changing that trend with free, calorie-counted recipes and automatic grocery lists - without breaking your dorm budget."
+    },
+    {
+      "title": "Best Meal Planning Apps in 2026 - The Girl on Bloor",
+      "url": "https://thegirlonbloor.com/meal-plan-apps/",
+      "snippet": "These are the best meal plan apps on the market! Read this guide to find out the perfect app that&#x27;ll make meal planning easier for you."
+    },
+    {
+      "title": "QuickBite | Devpost",
+      "url": "https://devpost.com/software/quickbite-ckrhn3",
+      "snippet": "Project Story QuickBite AI was born out of a simple frustration — the endless cycle of &quot;What should I eat today?&quot; combined with a busy schedule, limited budget, and the desire to eat healthier. I wanted to create something that could think like a nutritionist, act like a meal planner, and adapt like a personal assistant."
+    },
+    {
+      "title": "AI College Student Meal Planner - Dorm-Friendly Meals on a Budget",
+      "url": "https://bitekit.app/tools/ai-college-student-meal-planner",
+      "snippet": "How does the AI College Student Meal Planner work? The planner uses AI with access to real food pricing data to create a complete 7-day meal plan tailored to your dorm equipment, budget, and dietary needs. It generates meals you can actually make with your equipment, a grocery list with dorm storage tips, detailed recipes, and dining hall strategies."
+    },
+    {
+      "title": "Quickbite - Reviews, Pricing &amp; Alternatives | StartupHub.ai",
+      "url": "https://www.startuphub.ai/startups/quickbite",
+      "snippet": "&quot; I made QuickBite (a recipe app for 5-minute meals) with Biela. Most recipe apps overwhelm you with endless options, filters, and long cooking times. I wanted something dead simple. So I built QuickBite 🍲 An app that only shows recipes you… &quot; more View on Reddit"
+    },
+    {
+      "title": "GitHub - Nandan-AM/QuickBite: QuickBite is a lightweight college ...",
+      "url": "https://github.com/Nandan-AM/QuickBite",
+      "snippet": "QuickBite is a lightweight college canteen app where students can place food orders and canteen members can manage the menu and accept orders. It has two modes — Student Mode for ordering and Canteen Member Mode for editing the menu and handling orders. Fast, simple, and easy to use."
+    }
+  ],
+  "researchedAt": "2026-08-31T18:30:11.120Z"
+}

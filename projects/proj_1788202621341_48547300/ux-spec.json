@@ -1,0 +1,303 @@
+{
+  "projectId": "proj_1788202621341_48547300",
+  "idea": "Build a fitness & workout planner app",
+  "appName": "ForgeFit AI",
+  "screens": [
+    {
+      "screenId": "screen_dashboard",
+      "screenName": "Today & Readiness Dashboard",
+      "purpose": "Provides an immediate overview of daily physical readiness, today's auto-regulated workout session, muscle group recovery status, and workout streak performance.",
+      "userGoal": "Quickly assess physical recovery, view today's workout plan, and jump right into logging a workout.",
+      "entryPoints": [
+        "App Launch",
+        "Bottom Navigation Bar: Home Tab"
+      ],
+      "exitActions": [
+        "Tap 'Start Session' -> Open Active Workout Logger",
+        "Tap 'Edit Routine' -> Open Routine & Equipment Configurator",
+        "Tap 'View Detailed Progress' -> Open Progress & Analytics"
+      ],
+      "layoutStructure": "Sticky top bar with user profile/streak + Scrollable body containing Readiness Gauge hero card, Today's Scheduled Workout card, Muscle Recovery Heatmap, and Quick Action bar + Persistent bottom tab navigation.",
+      "uiComponents": [
+        "Readiness Score Hero Card",
+        "Today's Session Card with Start CTA",
+        "Muscle Recovery Heatmap Widget",
+        "Weekly Workout Streak Tracker",
+        "Quick Action Floating Buttons"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Today's Session Card",
+          "trigger": "Single tap on 'Start Session' CTA",
+          "action": "Navigates directly to screen_active_workout initialized with today's dynamic plan",
+          "feedback": "Haptic click pulse and slide-left transition"
+        },
+        {
+          "componentName": "Muscle Recovery Heatmap Widget",
+          "trigger": "Tap on specific muscle region (e.g., Chest)",
+          "action": "Opens localized recovery modal detailing estimated fatigue %, hours resting, and recommended load modifier",
+          "feedback": "Subtle scale zoom on tapped muscle region with bottom sheet slide-up"
+        }
+      ],
+      "requiredData": [
+        "readinessScore",
+        "todaysSessionPlan",
+        "muscleFatigue breakdown",
+        "streakDaysCount",
+        "lastWorkoutSummary"
+      ],
+      "loadingState": "Skeleton shimmer animation for readiness hero card, workout session preview, and heat map avatar outlines.",
+      "emptyState": "Rest day illustration with message 'Optimal Recovery Day. No workout required today!' and a 'Log Light Mobility' action button.",
+      "errorState": "Top warning banner 'Unable to calculate readiness score. Pull down to refresh health data.'",
+      "successState": "Green banner alert 'Health data synced successfully. Readiness updated to 88%!'",
+      "mobileConsiderations": "Thumb-accessible primary CTA pinned near lower half of screen; high visual contrast metrics visible in outdoor light or bright gym conditions."
+    },
+    {
+      "screenId": "screen_active_workout",
+      "screenName": "Active Workout Logger",
+      "purpose": "High-contrast, low-friction interface for real-time set tracking, rest timer orchestration, and auto-regulated weight/rep dynamic adjustments.",
+      "userGoal": "Effortlessly log sets, reps, and RPE during a workout while adhering to automated rest timing and load adjustments.",
+      "entryPoints": [
+        "Tap 'Start Session' on Dashboard Screen",
+        "Tap 'Begin Routine' on Routine Builder Screen"
+      ],
+      "exitActions": [
+        "Tap 'Finish Session' -> Displays Workout Summary Modal -> Return to Dashboard Screen",
+        "Tap 'Quit Session' -> Confirmation dialog -> Return to Dashboard Screen"
+      ],
+      "layoutStructure": "Top fixed bar (timer, workout progress bar, finish button) + Scrollable stack of exercise log cards with interactive set rows + Bottom fixed rest timer controller strip.",
+      "uiComponents": [
+        "Workout Timer Header Bar",
+        "Exercise Navigation Card Stack",
+        "Set Row Matrix (Previous weight/reps, Target weight/reps, Actual Input, RPE selector, Checkbox)",
+        "AI Load Adjustment Chip",
+        "Floating Rest Countdown Timer Bar",
+        "Exercise Swap Dropdown Menu"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Set Checkbox",
+          "trigger": "Single tap on completed set checkmark",
+          "action": "Logs set, locks row inputs, triggers rest timer countdown bar, and recalculates weight for next set if RPE deviates from target",
+          "feedback": "Vibrant green checkmark animation, sharp double-haptic vibration, and rest timer start audio pulse"
+        },
+        {
+          "componentName": "AI Load Adjustment Chip",
+          "trigger": "Single tap on suggestion tag (e.g., '+5 lbs suggested')",
+          "action": "Auto-populates next set weight input with AI suggested load based on previous RPE log",
+          "feedback": "Micro-pulse on target input field and subtle check mark indicator"
+        }
+      ],
+      "requiredData": [
+        "activeSessionId",
+        "exerciseSequence",
+        "targetSetsRepsWeight",
+        "rpeScaleData",
+        "restTimerSettings"
+      ],
+      "loadingState": "Minimal translucent loading overlay with text 'Preparing dynamic session adjustments...'",
+      "emptyState": "Empty exercise log placeholder with prompt 'No exercises in this session. Tap + to add an exercise.'",
+      "errorState": "Inline notification badge 'Timer sound muted due to silent mode. Rest timer visible on screen.'",
+      "successState": "Full-screen celebration modal with confetti effect, total volume summary, and 'Workout Saved' badge.",
+      "mobileConsiderations": "Minimum touch targets increased to 56dp for fatigue tolerance; keep-screen-awake active during session; ultra-high contrast dark theme for gym visibility."
+    },
+    {
+      "screenId": "screen_routine_builder",
+      "screenName": "Routine & Equipment Configurator",
+      "purpose": "Enables users to design custom workout splits, auto-generate AI routines, and filter exercises dynamically by available equipment.",
+      "userGoal": "Create or modify workout routines that align with target muscle groups and available gym equipment.",
+      "entryPoints": [
+        "Bottom Navigation Bar: Routines Tab",
+        "Tap 'Edit Routine' on Dashboard Screen"
+      ],
+      "exitActions": [
+        "Tap 'Save Routine' -> Save & return to Dashboard or Routines List",
+        "Tap 'Start This Routine' -> Open Active Workout Logger"
+      ],
+      "layoutStructure": "Top sticky equipment filter pill carousel + Workout split tab strip (e.g., Day 1: Push, Day 2: Pull) + Reorderable exercise vertical list + Sticky bottom CTA bar.",
+      "uiComponents": [
+        "Equipment Filter Pill Selector",
+        "Split Tab Navigator",
+        "Reorderable Exercise Drag-Cards",
+        "AI Routine Auto-Generator Toggle",
+        "Add/Swap Exercise Button Modal Trigger",
+        "Target Muscle Split Distribution Meter"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Equipment Filter Pill Selector",
+          "trigger": "Single tap on equipment tag (e.g., 'Dumbbells Only')",
+          "action": "Filters available exercise library and flags incompatible exercises in current routine with a swap prompt",
+          "feedback": "Pill changes to active state color; non-matching exercises dim with alert badge"
+        },
+        {
+          "componentName": "Exercise Drag-Handle",
+          "trigger": "Long press and vertical drag",
+          "action": "Reorders exercise sequence within current workout day layout",
+          "feedback": "Card scales up slightly (1.02x), subtle shadow elevation drop, heavy continuous tactile haptic feedback"
+        }
+      ],
+      "requiredData": [
+        "userCustomRoutines",
+        "equipmentInventory",
+        "exerciseDatabase",
+        "targetSplitRatios"
+      ],
+      "loadingState": "Grid skeleton pulses for exercise cards and loading spinner inside equipment filter list.",
+      "emptyState": "Illustration showing empty gym bag with text 'No routines match selected equipment filter. Adjust filters or generate with AI.'",
+      "errorState": "Alert dialog 'Unable to save routine offline changes. Retry when connected.'",
+      "successState": "Toast popup 'Routine Upper Body Hypertrophy updated and set as active routine!'",
+      "mobileConsiderations": "Smooth drag-and-drop gesture handles with clear tactile feedback; easily accessible pill tags optimized for horizontal thumb scrolling."
+    },
+    {
+      "screenId": "screen_analytics",
+      "screenName": "Progress & Analytics",
+      "purpose": "Presents deep visual analytical feedback on long-term strength progression, calculated 1RM estimations, training volume, and muscle group symmetry.",
+      "userGoal": "Analyze personal records, spot strength imbalances, and verify progressive overload progress over time.",
+      "entryPoints": [
+        "Bottom Navigation Bar: Analytics Tab",
+        "Tap 'View Detailed Progress' from Dashboard Screen"
+      ],
+      "exitActions": [
+        "Tap 'Export Data' -> Opens native share sheet",
+        "Tap exercise data point -> Opens detailed single-exercise history modal"
+      ],
+      "layoutStructure": "Top filter controls (Timeframe & Metric switchers) + Vertical scrollable analytical card feed (1RM Trend Chart, Total Volume Stacked Bar, Muscle Balance Radar Chart, PR Milestone History).",
+      "uiComponents": [
+        "Timeframe Segmented Control (1M, 3M, 6M, 1Y, ALL)",
+        "Exercise Selector Dropdown",
+        "Interactive 1RM Line Chart",
+        "Volume Progression Chart",
+        "Muscle Balance Radar Graph",
+        "Personal Record (PR) Milestone Feed"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Interactive 1RM Line Chart",
+          "trigger": "Single tap or drag on graph data point",
+          "action": "Displays precise date, logged weight, calculated 1RM, and session context tooltip",
+          "feedback": "Vertical chart guide-line snaps to nearest data node with light haptic click"
+        },
+        {
+          "componentName": "Timeframe Segmented Control",
+          "trigger": "Single tap on timeframe (e.g., '3M')",
+          "action": "Re-aggregates and animates chart data for selected 3-month window",
+          "feedback": "Active tab indicator slides smoothly and graph line morphs to new coordinates"
+        }
+      ],
+      "requiredData": [
+        "historical1RMData",
+        "volumePerMuscleGroup",
+        "prMilestonesList",
+        "symmetryIndexScore"
+      ],
+      "loadingState": "Animated chart path skeleton placeholders and pulse effects on summary metrics cards.",
+      "emptyState": "Card overlay with message 'Complete at least 3 workouts to reveal auto-calculated 1RM progression charts.'",
+      "errorState": "Inline error banner 'Failed to refresh chart data. Tap to reload.'",
+      "successState": "Gold badge overlay highlight 'New Personal Record Detected: Bench Press +10 lbs!'",
+      "mobileConsiderations": "Support landscape rotation for extended line chart analysis; pinch-to-zoom capabilities on dense timeline data."
+    }
+  ],
+  "navigationFlows": [
+    {
+      "flowName": "Start & Complete Daily Workout Flow",
+      "trigger": "User opens app and taps 'Start Session' on Dashboard",
+      "sequence": [
+        "screen_dashboard",
+        "screen_active_workout",
+        "Workout Summary Modal",
+        "screen_dashboard"
+      ]
+    },
+    {
+      "flowName": "Equipment-Filtered Routine Customization Flow",
+      "trigger": "User taps 'Edit Routine' on Dashboard or navigates to Routines tab",
+      "sequence": [
+        "screen_dashboard",
+        "screen_routine_builder",
+        "Exercise Swap Modal",
+        "screen_routine_builder",
+        "screen_dashboard"
+      ]
+    },
+    {
+      "flowName": "Strength Progress Deep-Dive Flow",
+      "trigger": "User taps 'View Detailed Progress' or Analytics bottom tab",
+      "sequence": [
+        "screen_dashboard",
+        "screen_analytics",
+        "Exercise History Modal",
+        "screen_analytics"
+      ]
+    }
+  ],
+  "globalRules": [
+    "All primary interactive touch targets must measure at least 48x48dp, with active workout inputs reaching a minimum of 56x56dp for fatigue usability.",
+    "Screen dimming/sleep is explicitly disabled while screen_active_workout is in an active session state.",
+    "All workout session logging actions must support optimistic UI rendering and queue locally when network connectivity drops.",
+    "Provide immediate haptic and audible feedback for rest timer completion and set logging.",
+    "Auto-regulation algorithms must evaluate load and rep targets in under 100ms on device."
+  ],
+  "sharedComponents": [
+    {
+      "name": "Header Hero Card",
+      "description": "Standardized top hero container displaying primary focus score, summary badge, and dynamic accent borders.",
+      "usedInScreens": [
+        "screen_dashboard",
+        "screen_analytics"
+      ]
+    },
+    {
+      "name": "Rest Timer Bar Widget",
+      "description": "Persistent dynamic progress bar counting down rest duration with quick +30s and skip controls.",
+      "usedInScreens": [
+        "screen_active_workout",
+        "screen_dashboard"
+      ]
+    },
+    {
+      "name": "Equipment Filter Pill Group",
+      "description": "Horizontal scroll container of selectable filter pills for equipment availability.",
+      "usedInScreens": [
+        "screen_routine_builder",
+        "screen_active_workout"
+      ]
+    },
+    {
+      "name": "Metric Stat Chip",
+      "description": "Compact visual tag displaying target metric values (Weight, Reps, RPE, Fatigue) with status color overlays.",
+      "usedInScreens": [
+        "screen_dashboard",
+        "screen_active_workout",
+        "screen_routine_builder",
+        "screen_analytics"
+      ]
+    }
+  ],
+  "designRequirementsForStitch": {
+    "colorSemantics": [
+      "Primary Brand Amber Neon (#FFB800)",
+      "Dark Surface Slate (#121417)",
+      "Card Surface Charcoal (#1E2228)",
+      "High-Contrast White (#FFFFFF)",
+      "Success Emerald Green (#00E676)",
+      "Fatigue Alert Coral (#FF5252)",
+      "Rest/Recovery Electric Cyan (#00E5FF)"
+    ],
+    "typographyGuidelines": "High-impact condensed bold sans-serif font (e.g., Teko/Saira) for metric callouts and timers. Clean geometric sans-serif (Inter/Roboto) for body labels. Numeric display: 48pt bold mono; H1 Headings: 28pt bold; H2 Headings: 22pt semi-bold; Body: 16pt regular; Labels/Captions: 12pt medium.",
+    "spacingAndGrid": "Strict 8pt baseline grid token system using standard increments: 4, 8, 12, 16, 24, 32, 48, 64px.",
+    "componentVariantsNeeded": [
+      "Primary Action CTA Button (Default, Active Pressed, Disabled, Success State, High-Contrast Glow)",
+      "Set Matrix Input Row (Unfilled Default, Active Focus, Auto-Regulated Suggestion, Completed Checked, Error Alert)",
+      "Metric Stat Pill (Inactive Dark, Active Neon, Rested Cyan, Alert Red)",
+      "Interactive Chart Canvas (Default Light Line, Node Selected, Empty Data State)"
+    ],
+    "motionAndMicroInteractions": [
+      "Rest timer countdown shrink bar with 60fps linear transition",
+      "Set row completion checkmark tactile spring animation (150ms tension bounce)",
+      "Chart line dynamic morphing upon timeframe tab tap (300ms ease-in-out)",
+      "0.95x subtle scale-press response on all main gym CTA buttons"
+    ]
+  },
+  "generatedAt": "2026-08-31T18:58:27.508Z"
+}

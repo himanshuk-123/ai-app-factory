@@ -1,0 +1,35 @@
+{
+  "projectId": "proj_1788202621341_48547300",
+  "appName": "ForgeFit AI",
+  "stitchProjectId": "15217087911391375604",
+  "status": "PARTIAL_SUCCESS",
+  "screens": [
+    {
+      "screenId": "screen_dashboard",
+      "screenName": "Today & Readiness Dashboard",
+      "stitchScreenId": "screen_1788202793882",
+      "status": "GENERATED",
+      "previewUrl": "https://stitch.google.com/projects/15217087911391375604/screens/screen_1788202793882"
+    },
+    {
+      "screenId": "screen_active_workout",
+      "screenName": "Active Workout Logger",
+      "status": "FAILED",
+      "error": "Stitch MCP Screen Generation Failed for \"Active Workout Logger\": fetch failed"
+    },
+    {
+      "screenId": "screen_routine_builder",
+      "screenName": "Routine & Equipment Configurator",
+      "status": "FAILED",
+      "error": "Stitch MCP Screen Generation Failed for \"Routine & Equipment Configurator\": Already connected to a transport. Call close() before connecting to a new transport, or use a separate Protocol instance per connection."
+    },
+    {
+      "screenId": "screen_analytics",
+      "screenName": "Progress & Analytics",
+      "status": "FAILED",
+      "error": "Stitch MCP Screen Generation Failed for \"Progress & Analytics\": Already connected to a transport. Call close() before connecting to a new transport, or use a separate Protocol instance per connection."
+    }
+  ],
+  "designSystemApplied": true,
+  "generatedAt": "2026-08-31T19:01:01.751Z"
+}

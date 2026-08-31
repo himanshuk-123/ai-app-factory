@@ -1,0 +1,23 @@
+{
+  "projectId": "proj_1788202621341_48547300",
+  "idea": "Build a fitness & workout planner app",
+  "problem": "Fitness enthusiasts and beginners often struggle to design effective, progressive workout routines, track detailed exercise performance, and maintain long-term consistency without hiring expensive personal trainers.",
+  "targetUsers": [
+    "Casual gym-goers looking for structured routines",
+    "Strength athletes and powerlifters requiring precise progressive overload tracking",
+    "Busy professionals needing quick, adaptable home or equipment-limited workouts"
+  ],
+  "valueProposition": "An intuitive, data-driven workout planner that automatically adjusts routines based on performance, equipment availability, and recovery metrics.",
+  "competitionAssessment": "The market is heavily saturated with mature incumbents such as Strong, Hevy, Fitbod, MyFitnessPal, and Nike Training Club. Most basic features (exercise logging, timer, standard routines) are commoditized.",
+  "differentiation": "To stand out, the app must focus on a specific unserved niche (e.g., adaptive real-time AI auto-regulation, specific strength sports like strongman/hyrox, or deep micro-community social features).",
+  "technicalFeasibility": "High technical feasibility. standard cross-platform mobile architecture (React Native/Flutter), cloud database (Firebase/PostgreSQL), and optional machine learning models for exercise recommendations.",
+  "monetizationPotential": "Moderate to High overall industry spending, typically monetized via freemium subscription models ($5-$15/month). However, high Customer Acquisition Cost (CAC) reduces net profitability for generic apps.",
+  "keyRisks": [
+    "Extreme market saturation and high user churn rates",
+    "Prohibitive customer acquisition costs on digital channels",
+    "Feature parity trap where competing with established apps requires immense initial development effort"
+  ],
+  "score": 5.8,
+  "recommendation": "MODIFY",
+  "validatedAt": "2026-08-31T18:57:10.159Z"
+}

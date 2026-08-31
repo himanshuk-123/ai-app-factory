@@ -1,0 +1,339 @@
+{
+  "projectId": "proj_1788200975995_59a5b300",
+  "idea": "Build QuickBite, a student meal planner app with dorm recipes and cooking timers",
+  "appName": "QuickBite: Dorm Eats & Timers",
+  "screens": [
+    {
+      "screenId": "screen_onboarding",
+      "screenName": "Appliance & Profile Setup Screen",
+      "purpose": "Capture user's available dorm cooking appliances, weekly grocery budget, and dining hall meal swipe quota to personalize recipe recommendations.",
+      "userGoal": "Set up profile quickly to get tailored dorm-safe recipes and budget tracking without manual filtering.",
+      "entryPoints": [
+        "First Time App Launch",
+        "Settings: Reconfigure Profile"
+      ],
+      "exitActions": [
+        "Tap Save Profile -> Navigate to screen_dashboard",
+        "Tap Skip Setup -> Navigate to screen_dashboard with default profile"
+      ],
+      "layoutStructure": "Single-column scrollable form with multi-select appliance toggle grid, slider for budget, numeric stepper for meal swipes, and fixed bottom CTA button bar.",
+      "uiComponents": [
+        "Progress Header Stepper",
+        "Appliance Selection Toggle Grid",
+        "Weekly Budget Range Slider",
+        "Meal Swipe Counter Input",
+        "Dorm Constraints Helper Callout",
+        "Primary CTA Button (Save & Continue)"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Appliance Selection Toggle Grid",
+          "trigger": "Single tap on appliance icon card",
+          "action": "Toggles selection state (active/inactive) and dynamically updates recipe match preview count",
+          "feedback": "Haptic click pulse, 2px emerald green border highlight, and checkmark icon toggle"
+        },
+        {
+          "componentName": "Weekly Budget Range Slider",
+          "trigger": "Drag slider thumb or tap preset buttons ($30, $45, $60)",
+          "action": "Adjusts target weekly grocery spend limit",
+          "feedback": "Real-time value counter update with dollar indicator shifting from green to amber over $50"
+        }
+      ],
+      "requiredData": [
+        "userApplianceList",
+        "weeklyBudgetLimit",
+        "weeklyMealSwipes",
+        "dietaryRestrictions"
+      ],
+      "loadingState": "Skeleton shimmer boxes replacing appliance grid cards and balance inputs while loading user defaults.",
+      "emptyState": "Default state shows pre-selected standard microwave and mini-fridge options with $40 budget.",
+      "errorState": "Inline validation banner 'Please select at least one cooking appliance' if all are deselected on submit.",
+      "successState": "Confetti micro-animation with green check toast 'Profile Saved! Customizing your meal plan...'",
+      "mobileConsiderations": "Minimum 56x56dp touch targets for appliance cards; thumb-accessible sticky bottom CTA button."
+    },
+    {
+      "screenId": "screen_dashboard",
+      "screenName": "Home Dashboard Screen",
+      "purpose": "Serve as daily command center for meal planning, swipe/budget balancing, and rapid launch into cooking timers.",
+      "userGoal": "Instantly see what I can cook right now based on my ingredients, swipes left, and available appliances.",
+      "entryPoints": [
+        "App Launch (Returning Users)",
+        "Onboarding Complete",
+        "Bottom Tab Bar: Home"
+      ],
+      "exitActions": [
+        "Tap Recipe Card -> Navigate to screen_recipe_detail",
+        "Tap Grocery Icon -> Navigate to screen_grocery_list",
+        "Tap Log Swipe -> Increment swipe counter inline"
+      ],
+      "layoutStructure": "Top status bar with swipe/budget counter -> Horizontal scrolling 'Quick Eats' launchpad -> Vertical scrollable daily meal schedule feed -> Bottom tab navigation.",
+      "uiComponents": [
+        "Meal Swipe & Budget Balance Card",
+        "Appliance Quick-Filter Chips",
+        "Under-10-Min Recipe Carousel",
+        "Daily Meal Plan Timeline",
+        "Quick Start Timer Floating Action Button"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Appliance Quick-Filter Chips",
+          "trigger": "Single tap chip (e.g. Air Fryer Only)",
+          "action": "Filters dashboard recipe feed to matches using specified appliance",
+          "feedback": "Chip background fills with primary brand color, inactive chips dim to 50% opacity"
+        },
+        {
+          "componentName": "Meal Swipe Counter Pill",
+          "trigger": "Tap minus button or swipe left",
+          "action": "Deducts 1 dining swipe from remaining weekly count",
+          "feedback": "Numerical decremental animation with haptic confirmation bump"
+        }
+      ],
+      "requiredData": [
+        "remainingSwipes",
+        "weeklyBudgetRemaining",
+        "recommendedRecipes",
+        "activeApplianceFilter"
+      ],
+      "loadingState": "Pulsing skeleton layout for balance summary and horizontal recipe cards.",
+      "emptyState": "Card stating 'No meals planned for today' with a button 'Generate Quick Meal Plan'.",
+      "errorState": "Toast alert at top: 'Could not update meal swipes. Tap to retry connection.'",
+      "successState": "Badge animation on swipe counter when logged; recipe cards highlight recommended badge.",
+      "mobileConsiderations": "Swipeable cards with pull-to-refresh for recipe feed; edge-to-edge full width layout for mobile focus."
+    },
+    {
+      "screenId": "screen_recipe_detail",
+      "screenName": "Recipe Detail & Prep Screen",
+      "purpose": "Provide comprehensive step-by-step dorm-optimized recipe instructions, required equipment check, and ingredient scaling.",
+      "userGoal": "Verify I have all equipment and ingredients ready before starting the cooking timer.",
+      "entryPoints": [
+        "Dashboard Recipe Card Tap",
+        "Grocery List Recipe Link"
+      ],
+      "exitActions": [
+        "Tap Start Cooking -> Navigate to screen_cooking_timer",
+        "Tap Back Button -> Return to screen_dashboard",
+        "Tap Add Missing to Grocery -> Append to screen_grocery_list"
+      ],
+      "layoutStructure": "Sticky top hero image with appliance badge overlay -> Scrollable content area with segmented tabs (Prep Info, Ingredients, Steps) -> Fixed bottom bar with 'Start Guided Cooking' CTA.",
+      "uiComponents": [
+        "Recipe Hero Header with Wattage Tag",
+        "Appliance Compatibility Banner",
+        "Interactive Ingredient Checklist",
+        "Dorm Hack Tip Accordion",
+        "Start Cooking Sticky Bar Button"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Interactive Ingredient Checklist",
+          "trigger": "Tap checkbox beside ingredient item",
+          "action": "Marks item as present in dorm stock; strikes through line item text",
+          "feedback": "Subtle green checkmark animation and text dimming"
+        },
+        {
+          "componentName": "Start Cooking Sticky Bar Button",
+          "trigger": "Single tap",
+          "action": "Launches Guided Appliance Cooking Mode with active step preset",
+          "feedback": "Full-screen scale transition into dark-mode timer view with success haptic vibration"
+        }
+      ],
+      "requiredData": [
+        "recipeId",
+        "title",
+        "cookingTime",
+        "applianceRequired",
+        "microwaveWattagePreset",
+        "ingredientsList",
+        "prepSteps"
+      ],
+      "loadingState": "Hero photo skeleton pulse with gray blocks for ingredient checklist lines.",
+      "emptyState": "Message: 'Recipe detail unavailable offline unless previously saved.' with Save button.",
+      "errorState": "Full-screen retry prompt: 'Failed to load recipe details. Check internet connection.'",
+      "successState": "Checkmark indicators on all ingredients when user taps 'Select All Ready'.",
+      "mobileConsiderations": "Large touchable checkboxes (48x48dp); collapsible tip modules to save vertical screen space."
+    },
+    {
+      "screenId": "screen_cooking_timer",
+      "screenName": "Guided Appliance Cooking Mode Screen",
+      "purpose": "Full-screen high-contrast cooking mode featuring multi-stage timers, appliance-specific alerts, and step-by-step guidance.",
+      "userGoal": "Follow step-by-step cooking instructions with precise timers without screen turning off or food burning.",
+      "entryPoints": [
+        "Recipe Detail Page: 'Start Guided Cooking'",
+        "Dashboard Floating Action Button: Quick Timer"
+      ],
+      "exitActions": [
+        "Tap Complete Cooking -> Navigate to screen_dashboard with meal logged",
+        "Tap Exit Cooking -> Prompt confirmation alert -> Return to screen_recipe_detail"
+      ],
+      "layoutStructure": "Dark high-contrast mode header -> Large central circular countdown timer -> Current appliance instruction card -> Bottom step navigation controls (Pause, Next Step, Stir Alert).",
+      "uiComponents": [
+        "Circular Arc Progress Timer Display",
+        "Wattage / Power Level Indicator",
+        "Current Step Instruction Text",
+        "Appliance Action Alert Callout (e.g., 'Stir Bowl Now')",
+        "Primary Timer Control Buttons (Pause/Play/Skip step)"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Primary Timer Control Buttons",
+          "trigger": "Tap Pause / Play button",
+          "action": "Pauses or resumes countdown timer and audio chime state",
+          "feedback": "Button icon toggles smoothly with tactile audio click sound"
+        },
+        {
+          "componentName": "Appliance Action Alert Callout",
+          "trigger": "Timer reaches designated mid-point step (e.g. stir microwave noodle)",
+          "action": "Pauses countdown, triggers loud notification tone and vibration pulse sequence",
+          "feedback": "Flashing coral border and bold full-width alert prompt"
+        }
+      ],
+      "requiredData": [
+        "activeRecipeStep",
+        "totalStepsCount",
+        "timerDurationSeconds",
+        "appliancePowerLevel",
+        "midwayAlertInstruction"
+      ],
+      "loadingState": "Immediate renders without external fetch using pre-loaded recipe steps from screen_recipe_detail.",
+      "emptyState": "N/A - Direct screen transition with populated state.",
+      "errorState": "System banner if wake-lock fails: 'Keep screen awake manual toggle enabled.'",
+      "successState": "Triumphant sound chime, full-screen green glow with text 'Bon Appétit! Meal Completed!'",
+      "mobileConsiderations": "Keep-awake screen lock enabled automatically; giant touch targets for hands covered in food/water; extra-loud alarm sound triggers."
+    },
+    {
+      "screenId": "screen_grocery_list",
+      "screenName": "Smart Mini-Fridge Grocery Screen",
+      "purpose": "Consolidated store shopping list organized by aisle, with a mini-fridge volume capacity indicator and budget tracker.",
+      "userGoal": "Buy only necessary ingredients that fit within my $30-$50 budget and mini-fridge physical space limit.",
+      "entryPoints": [
+        "Bottom Navigation Bar: Grocery",
+        "Recipe Detail: Add Missing Ingredients"
+      ],
+      "exitActions": [
+        "Tap Checkbox -> Strike out item",
+        "Tap Clear Checked -> Remove completed items from list",
+        "Tap Back/Home -> Return to screen_dashboard"
+      ],
+      "layoutStructure": "Top sticky mini-fridge capacity meter and price summary card -> Aisle-grouped checkable list accordions -> Bottom floating add item input field.",
+      "uiComponents": [
+        "Mini-Fridge Volume Capacity Meter",
+        "Total Estimated Cost Pill",
+        "Aisle Group Category Headers",
+        "Checkable Grocery Item Row",
+        "Quick Add Custom Item Bar"
+      ],
+      "componentInteractions": [
+        {
+          "componentName": "Checkable Grocery Item Row",
+          "trigger": "Tap checkbox or swipe item row right",
+          "action": "Toggles completed state, updates total estimated cart cost, and decrements fridge capacity meter",
+          "feedback": "Item strikethrough, light haptic feedback, price summary updates immediately"
+        },
+        {
+          "componentName": "Quick Add Custom Item Bar",
+          "trigger": "Type item name and tap '+' or hit Keyboard Enter",
+          "action": "Appends new item under 'Uncategorized / General' section",
+          "feedback": "Item smoothly slides into top of list with brief highlight animation"
+        }
+      ],
+      "requiredData": [
+        "groceryItemsList",
+        "fridgeVolumePercentage",
+        "totalCartCost",
+        "weeklyBudgetLimit"
+      ],
+      "loadingState": "Skeleton shimmer list with category headers loading placeholder items.",
+      "emptyState": "Empty bag graphic with text 'Your mini-fridge list is empty! Add ingredients from recipes.'",
+      "errorState": "Alert banner 'Could not sync list across devices. Showing local cached list.'",
+      "successState": "Budget bar glows emerald green when overall cart total remains within weekly user budget.",
+      "mobileConsiderations": "One-handed bottom entry bar for fast input at supermarket; swipe-to-delete gesture for fast list cleanup."
+    }
+  ],
+  "navigationFlows": [
+    {
+      "flowName": "Initial Setup & Appliance Configuration Flow",
+      "trigger": "First app launch or re-configuring user profile from settings",
+      "sequence": [
+        "screen_onboarding",
+        "screen_dashboard"
+      ]
+    },
+    {
+      "flowName": "Recipe Selection to Guided Cooking Flow",
+      "trigger": "User chooses a recipe on dashboard and starts cooking process",
+      "sequence": [
+        "screen_dashboard",
+        "screen_recipe_detail",
+        "screen_cooking_timer",
+        "screen_dashboard"
+      ]
+    },
+    {
+      "flowName": "Meal Prep & Grocery Planning Flow",
+      "trigger": "User needs missing ingredients for planned dorm recipes",
+      "sequence": [
+        "screen_dashboard",
+        "screen_recipe_detail",
+        "screen_grocery_list"
+      ]
+    }
+  ],
+  "globalRules": [
+    "All touch targets must maintain a minimum standard size of 48x48dp (56x56dp preferred for cooking timer controls)",
+    "Optimistic UI updates applied for item checking, counter changes, and state toggles for zero latency feel",
+    "Screen wake-lock lock must be enforced during active timer screen_cooking_timer execution",
+    "High contrast ratios (WCAG AAA) mandatory for high-visibility use in dim dorm rooms or kitchen corners",
+    "Full offline availability for stored recipes, timer presets, and local grocery lists"
+  ],
+  "sharedComponents": [
+    {
+      "name": "Header Hero Card",
+      "description": "Standardized summary top card featuring metric indicators, active filters, or high-priority progress status.",
+      "usedInScreens": [
+        "screen_dashboard",
+        "screen_grocery_list"
+      ]
+    },
+    {
+      "name": "Appliance Badge Chip",
+      "description": "Visual pill indicator showing required cooking appliance icon and microwave wattage info.",
+      "usedInScreens": [
+        "screen_dashboard",
+        "screen_recipe_detail",
+        "screen_cooking_timer"
+      ]
+    },
+    {
+      "name": "Interactive Item Checklist Row",
+      "description": "Row item with check box control, item title, visual subtitle detail, and optional swipe-to-delete action.",
+      "usedInScreens": [
+        "screen_recipe_detail",
+        "screen_grocery_list"
+      ]
+    }
+  ],
+  "designRequirementsForStitch": {
+    "colorSemantics": [
+      "Primary Brand Dark Navy (#0F172A)",
+      "Accent Microwave Orange (#F97316)",
+      "Success Emerald Green (#10B981)",
+      "Alert Coral Red (#EF4444)",
+      "Mini-Fridge Cool Blue (#06B6D4)",
+      "Neutral Surface Slate Background (#F8FAFC)"
+    ],
+    "typographyGuidelines": "Sans-serif typography (Inter or System UI), bold 28pt page headings, 20pt section headers, 16pt body, 14pt list items, and 48pt timer display numbers.",
+    "spacingAndGrid": "Strict 8pt spatial grid system using 8, 16, 24, 32, 48px padding and margin tokens across all screens.",
+    "componentVariantsNeeded": [
+      "Primary Button (Default, Hover, Active, Disabled, Loading Spinner)",
+      "Appliance Selection Card (Default Unselected, Hover, Selected Active, Disabled Unusable)",
+      "Checklist Item Row (Default Unchecked, Checked Strikethrough, Swiped Action State)",
+      "Timer Display Module (Stopped, Active Running, Paused Flash, Mid-Cook Alert Flashing)"
+    ],
+    "motionAndMicroInteractions": [
+      "Smooth slide-up modal sheet transitions (250ms cubic-bezier ease-out)",
+      "Tactile button press scale feedback (0.96x compression on tap)",
+      "Progressive arc animation for countdown timer sweep (1000ms smooth updates)",
+      "Haptic light vibration pulses on checkbox taps and heavy vibration pattern on cook complete chimes"
+    ]
+  },
+  "generatedAt": "2026-08-31T18:31:23.154Z"
+}

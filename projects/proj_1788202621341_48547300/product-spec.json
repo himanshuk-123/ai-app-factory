@@ -1,0 +1,192 @@
+{
+  "projectId": "proj_1788202621341_48547300",
+  "idea": "Build a fitness & workout planner app",
+  "appName": "ForgeFit AI",
+  "tagline": "Adaptive workout planning and real-time auto-regulation for peak strength gains.",
+  "targetAudience": "Fitness enthusiasts, intermediate lifters, bodybuilders, and gym beginners looking for dynamic progressive overload, automated workout adjustments, and friction-free set logging without the cost of personal trainers.",
+  "mvpFeatures": [
+    {
+      "name": "Single-Tap Active Workout Tracker",
+      "description": "Ultra-minimalist live gym interface designed for rapid set logging, automatic rest timer triggers, and zero UI clutter between sets.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Dynamic Auto-Regulation Engine",
+      "description": "Calculates targeted weight and rep recommendations for subsequent sets based on logged RPE (Rating of Perceived Exertion) and historical performance.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Hybrid Equipment Routine Builder",
+      "description": "Routine creator that dynamically adjusts exercise selections based on current location and available equipment (e.g., commercial gym vs. home bodyweight/dumbbells).",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Target Muscle Heatmap",
+      "description": "Visual 2D/3D body diagram displaying target muscle strain, volume distribution, and recovery status across weekly workouts.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Progressive Overload Analytics",
+      "description": "Comprehensive charts tracking estimated 1RM (One Rep Max), total volume, set consistency, and personal records per exercise.",
+      "priority": "HIGH"
+    }
+  ],
+  "futureFeatures": [
+    {
+      "name": "Wearable Recovery Integration",
+      "description": "Syncs with Apple Health, Whoop, and Oura to dynamically scale daily workout volume based on Sleep and HRV metrics.",
+      "phase": "Phase 2"
+    },
+    {
+      "name": "Voice & Wrist-Based Logging",
+      "description": "Frictionless hands-free set logging via smartwatch app and natural language voice commands.",
+      "phase": "Phase 2"
+    },
+    {
+      "name": "Interactive 3D Muscle Visualizer",
+      "description": "Post-set real-time 3D anatomical model showing real-time biomechanical fatigue and muscle engagement.",
+      "phase": "Phase 3"
+    },
+    {
+      "name": "AI Computer Vision Form Check",
+      "description": "Camera-based real-time form feedback and bar-path tracking for heavy compound lifts.",
+      "phase": "Phase 3"
+    }
+  ],
+  "userPersonas": [
+    {
+      "name": "Marcus - Dedicated Intermediate Lifter",
+      "role": "Strength & Hypertrophy Enthusiast",
+      "painPoints": [
+        "Frustrated by complex, bloated workout apps that slow down logging between intense sets",
+        "Struggles to manually calculate progressive overload and dynamic RPE targets on the fly"
+      ],
+      "goals": [
+        "Consistently hit progressive overload targets without manual math",
+        "Log workouts in under 5 seconds per set during live gym sessions"
+      ]
+    },
+    {
+      "name": "Elena - Hybrid Gym Goer",
+      "role": "Busy Professional / Casual Lifter",
+      "painPoints": [
+        "Static workout programs break down when equipment at the gym is occupied or when working out at home",
+        "Overwhelmed by static workout templates that don't adjust when fatigue is high"
+      ],
+      "goals": [
+        "Seamlessly swap exercises based on available home or gym equipment",
+        "Maintain long-term routine consistency with personalized guidance"
+      ]
+    }
+  ],
+  "userJourneys": [
+    {
+      "flowName": "Live Workout Session & Auto-Regulated Logging",
+      "description": "User opens the app at the gym, starts a scheduled session, logs sets rapidly, and receives real-time weight adjustments.",
+      "steps": [
+        "Selects scheduled workout or equipment profile (e.g., Commercial Gym)",
+        "Taps into the active workout logging screen with pre-filled target weight/reps based on previous performance",
+        "Completes set and taps single-button complete, entering actual weight, reps, and optional RPE score",
+        "Rest timer automatically starts while AI engine recalculates target weight/reps for the next set if fatigue is indicated",
+        "Finishes session and views immediate summary card featuring muscle volume heatmap and PR achievements"
+      ]
+    },
+    {
+      "flowName": "Creating a Hybrid Adaptive Routine",
+      "description": "User sets up a personalized split tailored to their equipment access and weekly schedule.",
+      "steps": [
+        "Navigates to Routine Builder and chooses split type (e.g., Push/Pull/Legs)",
+        "Selects available equipment tags (e.g., Barbell, Cables, Dumbbells)",
+        "App generates progressive program with automatic substitute exercise suggestions for busy equipment",
+        "Saves routine to active schedule"
+      ]
+    }
+  ],
+  "screens": [
+    {
+      "id": "screen_active_workout",
+      "name": "Active Workout Logger",
+      "purpose": "Minimalist, high-contrast interface for live set tracking, timer management, and instant load adjustment",
+      "keyComponents": [
+        "Exercise Header with Quick Swap Trigger",
+        "Current Set Card (Weight, Reps, RPE Input)",
+        "Rest Timer Banner with Auto-Play Notifications",
+        "AI Auto-Regulated Recommendation Badge",
+        "Single-Tap Complete Button"
+      ]
+    },
+    {
+      "id": "screen_dashboard",
+      "name": "Today & Readiness Dashboard",
+      "purpose": "Overview of today's planned session, muscle recovery status, and weekly streak",
+      "keyComponents": [
+        "Daily Readiness Card",
+        "Target Muscle Heatmap Widget",
+        "Start Scheduled Workout Button",
+        "Quick Equipment Profile Switcher"
+      ]
+    },
+    {
+      "id": "screen_routine_builder",
+      "name": "Routine & Equipment Configurator",
+      "purpose": "Allows users to create, customize, and filter routines by available training equipment",
+      "keyComponents": [
+        "Split Selector (PPL, Upper/Lower, Full Body)",
+        "Equipment Filter Chips",
+        "Draggable Exercise Reorder List",
+        "Auto-Progression Rule Toggles"
+      ]
+    },
+    {
+      "id": "screen_analytics",
+      "name": "Progress & Analytics",
+      "purpose": "In-depth visual feedback on overall strength progression, 1RM estimates, and muscle balance",
+      "keyComponents": [
+        "1RM Estimate Chart",
+        "Volume Progression Graph",
+        "Muscle Balance & Symmetry Gauge",
+        "Personal Record Log"
+      ]
+    }
+  ],
+  "navigationStructure": {
+    "type": "Bottom Tab Bar + Stack Navigation",
+    "mainTabs": [
+      "Dashboard",
+      "Workout Log",
+      "Routines",
+      "Analytics"
+    ],
+    "routes": [
+      {
+        "name": "Dashboard",
+        "screenId": "screen_dashboard",
+        "description": "Overview of daily training readiness and quick session access"
+      },
+      {
+        "name": "Workout Log",
+        "screenId": "screen_active_workout",
+        "description": "Live workout logging interface"
+      },
+      {
+        "name": "Routines",
+        "screenId": "screen_routine_builder",
+        "description": "Manage and create dynamic workout programs"
+      },
+      {
+        "name": "Analytics",
+        "screenId": "screen_analytics",
+        "description": "Detailed progress and volume tracking charts"
+      }
+    ]
+  },
+  "techStack": {
+    "frontend": "React Native / Expo (TypeScript) with NativeWind & Reanimated",
+    "backend": "Node.js / Express (TypeScript) with Python FastAPI for ML recommendation engine",
+    "database": "PostgreSQL / Prisma ORM with Redis for live workout state caching",
+    "auth": "Supabase Auth",
+    "hosting": "Render (Backend/APIs) & Vercel (Web/Dashboards)"
+  },
+  "monetizationModel": "Freemium model offering free core set logging and basic routines; Pro subscription ($9.99/month or $59.99/year) unlocks AI auto-regulation load recommendations, wearable recovery integration, and advanced muscle analytics.",
+  "generatedAt": "2026-08-31T18:57:49.136Z"
+}

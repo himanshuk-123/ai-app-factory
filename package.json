@@ -1,0 +1,27 @@
+{
+  "name": "app_factory",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/orchestrator/index.ts",
+  "scripts": {
+    "factory": "tsx src/orchestrator/index.ts",
+    "server": "tsx src/server/index.ts",
+    "ai:diagnose": "tsx src/infrastructure/ai/diagnose.ts",
+    "test:ai": "tsx test/ai-infrastructure.test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "An automated multi-agent framework for generating, managing, executing, and testing software projects.",
+  "dependencies": {
+    "@google/genai": "^2.18.0",
+    "@google/stitch-sdk": "^0.3.5",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "dotenv": "^17.4.2",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.3.0"
+  }
+}

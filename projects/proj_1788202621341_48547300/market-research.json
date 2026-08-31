@@ -1,0 +1,136 @@
+{
+  "projectId": "proj_1788202621341_48547300",
+  "idea": "Build a fitness & workout planner app",
+  "targetMarket": "Fitness enthusiasts, bodybuilders, and gym beginners looking for structured routine design, automated progressive overload tracking, and personalized guidance without the high costs of personal trainers.",
+  "competitors": [
+    {
+      "name": "Hevy",
+      "overview": "A highly popular social workout tracking app designed for gym-goers to log lifts, track progress, and share routines with a community.",
+      "keyFeatures": [
+        "Social feed and routine sharing",
+        "Set, rep, and weight progression logging",
+        "Visual muscle heatmaps",
+        "Apple Watch integration"
+      ],
+      "pricing": "Freemium with Pro tier ($3.99/month or $23.99/year)",
+      "complaints": "Overwhelming social feed clutter for users who want pure tracking, lack of deep AI auto-progression logic."
+    },
+    {
+      "name": "Strong",
+      "overview": "A minimalist, high-rated exercise tracking app focused on efficiency and straightforward strength training logging.",
+      "keyFeatures": [
+        "Minimalist fast set logging",
+        "Custom routine builder",
+        "Rest timer and volume graphs",
+        "Export data to CSV"
+      ],
+      "pricing": "Freemium with Strong Pro ($4.99/month or $29.99/year, plus lifetime unlock option)",
+      "complaints": "Slow feature update cycles, limited AI adaptation for beginner guidance, basic reporting on free tier."
+    },
+    {
+      "name": "JEFIT",
+      "overview": "An established fitness planner app offering a vast database of exercises and comprehensive workout planning tools.",
+      "keyFeatures": [
+        "Massive exercise video library",
+        "Detailed workout planner and builder",
+        "Body measurement tracking",
+        "Community workout programs"
+      ],
+      "pricing": "Freemium with ads; Elite tier ($12.99/month or $69.99/year)",
+      "complaints": "Dated and cluttered user interface, intrusive ads on free tier, overly complex setup for quick logging."
+    }
+  ],
+  "competitorFeatures": [
+    "Detailed set, rep, and weight logging",
+    "Rest timers and warm-up set calculators",
+    "Exercise library with demonstration videos",
+    "Progressive overload progression charts",
+    "Wearable sync (Apple Health, Google Fit)"
+  ],
+  "competitorPricing": "Freemium dominant landscape. Basic logging is generally free with routine limits; Pro tiers range from $3.99/month to $12.99/month (or $24 to $70 annually) to unlock unlimited routines, deep analytics, and AI coaching.",
+  "userComplaints": [
+    "Overly bloated UIs that slow down quick logging between sets",
+    "Static workout plans that fail to adapt automatically when sets are missed or fatigue sets in",
+    "Intrusive popups and paywalls for basic tracking features",
+    "Lack of intelligent weight/rep recommendations tailored to dynamic daily readiness"
+  ],
+  "marketGaps": [
+    "Real-time AI auto-regulation that updates rest time and upcoming target weight based on historical velocity and set feedback",
+    "Frictionless voice-to-log or camera-based logging during active workout sessions",
+    "Dynamic hybrid routine builders that seamlessly bridge home bodyweight training with commercial gym equipment based on daily location"
+  ],
+  "differentiationOpportunities": [
+    "Context-aware AI coach that dynamically adjusts progressive overload based on wearable sleep/recovery data",
+    "Ultra-minimalist, single-tap wrist and phone logging interface designed specifically for live gym environments",
+    "Interactive 3D target-muscle engagement visualization following each set"
+  ],
+  "monetizationOpportunities": [
+    "Freemium subscription model (Monthly/Annual Pro pass for AI feature set and unlimited routines)",
+    "AI Personal Trainer tier offering personalized dynamic routine adjustments",
+    "In-app marketplace for certified trainer-created workout programs and specialized nutrition plans",
+    "B2B SaaS licensing for boutique gyms and personal trainers looking for white-labeled client tracking tools"
+  ],
+  "marketRisks": [
+    "High market saturation with deeply entrenched competitors like Hevy, Strong, and JEFIT",
+    "Platform fatigue causing users to drop back to native Apple Notes or simple spreadsheets",
+    "Seasonal user churn, typical in fitness apps during post-New Year periods"
+  ],
+  "sources": [
+    {
+      "title": "7 Best Workout Planner Apps 2026 (Free + Paid) - fitloop.app",
+      "url": "https://fitloop.app/compare/best-workout-planner-apps",
+      "snippet": "The 7 best workout planner apps in 2026. Build custom routines, track progressions, and log workouts. Compare Fitloop, Strong, Hevy, JEFIT and more — free and paid."
+    },
+    {
+      "title": "Expert-Tested: The Best Workout Apps (2026) | Garage Gym Reviews",
+      "url": "https://www.garagegymreviews.com/best-workout-apps",
+      "snippet": "Our expert product testers have tried dozens of fitness apps, and these are our top picks for best workout apps."
+    },
+    {
+      "title": "The 10 Best Workout And Fitness Apps Of 2026 - Forbes",
+      "url": "https://www.forbes.com/health/weight-loss/best-fitness-apps/",
+      "snippet": "Forbes Health reviews the best workout and fitness apps of 2024, based on cost, key features and more. Explore our top-rated apps worth downloading."
+    },
+    {
+      "title": "10 Best Workout Apps 2026: Free + Paid, Honestly Tested",
+      "url": "https://fitloop.app/blog/best-workout-apps",
+      "snippet": "We tested every major workout app — these 10 made the cut. Compare free vs paid picks for tracking, AI plans, and bodyweight-to-barbell training. Find the right app for your goals."
+    },
+    {
+      "title": "11 Best Workout Apps in 2026 (Tested) - LoadMuscle",
+      "url": "https://loadmuscle.com/blog/best-workout-app-2026",
+      "snippet": "We tested the 11 best workout apps of 2026 for tracking, AI planning, and muscle gain. Free and paid picks compared side by side."
+    },
+    {
+      "title": "Best Online Workout Planner | Build Custom Fitness Plans in Minutes",
+      "url": "https://www.fitbudd.com/academy/best-online-workout-planner",
+      "snippet": "Build your perfect workout in minutes with online platform. These 7 online planners make it easy to create routines for strength, fat loss or full-body fitness."
+    },
+    {
+      "title": "How to Build a Fitness App in 2026: Steps, Costs, Tech Stack",
+      "url": "https://topflightapps.com/ideas/how-to-build-a-fitness-app/",
+      "snippet": "With easier access to at-home workouts, virtual classes, and on-demand coaching (often paired with wearable-driven insights), it&#x27;s no wonder many of us start pondering, &quot;How to create a workout app?&quot; or rather &quot;How to create a winning workout app?&quot;. Here&#x27;s a quick snapshot on how to build a fitness app, step-by-step."
+    },
+    {
+      "title": "Fitness App Builder: Create Workout Apps Without Code",
+      "url": "https://newly.app/build/fitness-app-builder",
+      "snippet": "Build your own fitness app without coding. Learn essential features, costs, and how to create workout tracking apps for iOS and Android."
+    },
+    {
+      "title": "Fitness App Builder - Keep Members Moving with AI",
+      "url": "https://emergent.sh/ai-app-builder/fitness",
+      "snippet": "Create your fitness app in minutes with AI. Deliver workout plans, track progress, book classes, and build a member community without coding."
+    },
+    {
+      "title": "Top 5 Fitness App Builders in 2026 - Adalo",
+      "url": "https://www.adalo.com/posts/fitness-app-builder/",
+      "snippet": "This guide will help you find the perfect fitness app builder for your needs in 2025. Compare features, pricing, and ease of use."
+    },
+    {
+      "title": "How to Build a Fitness App: Cost, Timeline, Custom vs SaaS",
+      "url": "https://www.raftlabs.com/blog/how-to-build-a-fitness-app",
+      "snippet": "Building a custom fitness app costs $60K-$300K and takes 12-38 weeks depending on features like wearable sync, video coaching, and branded App Store presence. RaftLabs builds custom fitness apps for gym chains, personal training businesses, and fitness influencers who need HealthKit integration or a white-labeled product. MVP builds start at $60K."
+    }
+  ],
+  "researchedAt": "2026-08-31T18:57:26.251Z"
+}

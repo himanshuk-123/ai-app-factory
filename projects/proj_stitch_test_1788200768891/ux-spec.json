@@ -1,0 +1,42 @@
+{
+  "projectId": "proj_stitch_test_1788200768891",
+  "appName": "FitVision AI",
+  "screens": [
+    {
+      "screenId": "screen_workout_dash",
+      "screenName": "Workout & Posture Dashboard",
+      "purpose": "Displays live camera feed, active exercise stats, and posture score gauge.",
+      "userGoal": "Start a workout session and view real-time posture correction indicators.",
+      "layoutStructure": "Top camera view area -> Split stats cards (Reps, Calories, Form Score) -> Floating Start Workout CTA",
+      "uiComponents": [
+        "Camera Viewport",
+        "Form Score Gauge Pill",
+        "Reps Stat Card",
+        "Primary Action Button"
+      ]
+    },
+    {
+      "screenId": "screen_analytics",
+      "screenName": "Weekly Performance Analytics",
+      "purpose": "Visualizes weekly workout consistency, calorie burn trends, and muscle group balance.",
+      "userGoal": "Analyze weekly progress and view AI recommendations for rest days.",
+      "layoutStructure": "Weekly Bar Chart -> Muscle Group Radar Diagram -> AI Recommendation Alert Card",
+      "uiComponents": [
+        "Bar Chart",
+        "Radar Diagram",
+        "Alert Banner",
+        "Date Selector"
+      ]
+    }
+  ],
+  "designRequirementsForStitch": {
+    "colorSemantics": [
+      "Neon Lime Accent (#84CC16)",
+      "Dark Charcoal Background (#0F172A)",
+      "Card Surface (#1E293B)",
+      "High Contrast White Text"
+    ],
+    "typographyGuidelines": "Modern geometric sans-serif (Outfit / Inter) with bold display metrics",
+    "spacingAndGrid": "8pt spatial grid with generous touch targets (min 48px)"
+  }
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 0,
+    "agent": "Orchestrator",
+    "type": "WORKFLOW_STARTED",
+    "status": "RUNNING",
+    "message": "Started AI App Factory workflow for \"Build a fitness & workout planner app\"",
+    "progress": 0,
+    "id": "evt_1788202621349_nw3i1",
+    "timestamp": "2026-08-31T18:57:01.349Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 1,
+    "agent": "Idea Validation Agent",
+    "type": "AGENT_STARTED",
+    "status": "RUNNING",
+    "message": "Validating app market viability & tech stack feasibility...",
+    "progress": 0,
+    "id": "evt_1788202621360_5nura",
+    "timestamp": "2026-08-31T18:57:01.360Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 1,
+    "agent": "IdeaValidationAgent",
+    "type": "LOG",
+    "status": "RUNNING",
+    "message": "[AI Gateway] IdeaValidationAgent requested IDEA_VALIDATION on model gemini-3.6-flash (Prompt v1.0.0)",
+    "id": "evt_1788202621380_umpyq",
+    "timestamp": "2026-08-31T18:57:01.380Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 1,
+    "agent": "IdeaValidationAgent",
+    "type": "LOG",
+    "status": "COMPLETED",
+    "message": "[AI Gateway] IdeaValidationAgent completed IDEA_VALIDATION (1089 tokens, 8779ms)",
+    "id": "evt_1788202630159_rq24n",
+    "timestamp": "2026-08-31T18:57:10.159Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 1,
+    "agent": "Idea Validation Agent",
+    "type": "AGENT_COMPLETED",
+    "status": "SUCCESS",
+    "message": "Idea Validation recommendation: MODIFY (Score: 5.8/10)",
+    "progress": 8,
+    "artifactPath": "idea-validation.json",
+    "id": "evt_1788202630207_ictxh",
+    "timestamp": "2026-08-31T18:57:10.207Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 2,
+    "agent": "Market Research Agent",
+    "type": "AGENT_STARTED",
+    "status": "RUNNING",
+    "message": "Analyzing market competitors & target audience trends...",
+    "progress": 8,
+    "id": "evt_1788202630221_qlqn5",
+    "timestamp": "2026-08-31T18:57:10.221Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 2,
+    "agent": "MarketResearchAgent",
+    "type": "LOG",
+    "status": "RUNNING",
+    "message": "[AI Gateway] MarketResearchAgent requested MARKET_RESEARCH on model gemini-3.6-flash (Prompt v1.0.0)",
+    "id": "evt_1788202631967_zfh8o",
+    "timestamp": "2026-08-31T18:57:11.967Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 2,
+    "agent": "MarketResearchAgent",
+    "type": "LOG",
+    "status": "COMPLETED",
+    "message": "[AI Gateway] MarketResearchAgent completed MARKET_RESEARCH (3262 tokens, 14281ms)",
+    "id": "evt_1788202646249_e8oz4",
+    "timestamp": "2026-08-31T18:57:26.249Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 2,
+    "agent": "Market Research Agent",
+    "type": "AGENT_COMPLETED",
+    "status": "SUCCESS",
+    "message": "Market Research completed: undefined web sources analyzed",
+    "progress": 15,
+    "artifactPath": "market-research.json",
+    "id": "evt_1788202646289_xo36t",
+    "timestamp": "2026-08-31T18:57:26.289Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 3,
+    "agent": "Product Strategist Agent",
+    "type": "AGENT_STARTED",
+    "status": "RUNNING",
+    "message": "Generating detailed product specification & MVP features...",
+    "progress": 15,
+    "id": "evt_1788202646292_nbtdt",
+    "timestamp": "2026-08-31T18:57:26.292Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 3,
+    "agent": "ProductStrategistAgent",
+    "type": "LOG",
+    "status": "RUNNING",
+    "message": "[AI Gateway] ProductStrategistAgent requested PRODUCT_STRATEGY on model gemini-3.6-flash (Prompt v1.0.0)",
+    "id": "evt_1788202646386_yd0fs",
+    "timestamp": "2026-08-31T18:57:26.386Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 3,
+    "agent": "ProductStrategistAgent",
+    "type": "LOG",
+    "status": "COMPLETED",
+    "message": "[AI Gateway] ProductStrategistAgent completed PRODUCT_STRATEGY (4099 tokens, 22744ms)",
+    "id": "evt_1788202669130_alhn7",
+    "timestamp": "2026-08-31T18:57:49.130Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 3,
+    "agent": "Product Strategist Agent",
+    "type": "AGENT_COMPLETED",
+    "status": "SUCCESS",
+    "message": "Product Specification generated for \"ForgeFit AI\" (5 MVP features)",
+    "progress": 23,
+    "artifactPath": "product-spec.json",
+    "id": "evt_1788202669196_i43n1",
+    "timestamp": "2026-08-31T18:57:49.196Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 4,
+    "agent": "UX Architect Agent",
+    "type": "AGENT_STARTED",
+    "status": "RUNNING",
+    "message": "Architecting user flows, navigation hierarchy & screen wireframes...",
+    "progress": 23,
+    "id": "evt_1788202669201_cq4fd",
+    "timestamp": "2026-08-31T18:57:49.201Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 4,
+    "agent": "UXArchitectAgent",
+    "type": "LOG",
+    "status": "RUNNING",
+    "message": "[AI Gateway] UXArchitectAgent requested UX_ARCHITECTURE on model gemini-3.6-flash (Prompt v1.0.0)",
+    "id": "evt_1788202669346_etexb",
+    "timestamp": "2026-08-31T18:57:49.346Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 4,
+    "agent": "UXArchitectAgent",
+    "type": "LOG",
+    "status": "COMPLETED",
+    "message": "[AI Gateway] UXArchitectAgent completed UX_ARCHITECTURE (7222 tokens, 38158ms)",
+    "id": "evt_1788202707505_14rvv",
+    "timestamp": "2026-08-31T18:58:27.505Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 4,
+    "agent": "UX Architect Agent",
+    "type": "AGENT_COMPLETED",
+    "status": "SUCCESS",
+    "message": "UX Specification created (4 screens, 3 flows)",
+    "progress": 31,
+    "artifactPath": "ux-spec.json",
+    "id": "evt_1788202707610_jmx3p",
+    "timestamp": "2026-08-31T18:58:27.610Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 5,
+    "agent": "Stitch Designer Agent",
+    "type": "AGENT_STARTED",
+    "status": "RUNNING",
+    "message": "Generating UI design system & visual screen specs...",
+    "progress": 31,
+    "id": "evt_1788202707620_eue44",
+    "timestamp": "2026-08-31T18:58:27.620Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 5,
+    "agent": "Stitch Designer Agent",
+    "type": "AGENT_COMPLETED",
+    "status": "SUCCESS",
+    "message": "Stitch Design generation completed",
+    "progress": 38,
+    "artifactPath": "stitch-design.json",
+    "id": "evt_1788202861965_uhn93",
+    "timestamp": "2026-08-31T19:01:01.965Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 6,
+    "agent": "Web Generator Agent",
+    "type": "AGENT_STARTED",
+    "status": "RUNNING",
+    "message": "Generating production React + Vite web application codebase...",
+    "progress": 38,
+    "id": "evt_1788202861968_d7ujc",
+    "timestamp": "2026-08-31T19:01:01.968Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 6,
+    "agent": "Web Generator Agent",
+    "type": "AGENT_COMPLETED",
+    "status": "SUCCESS",
+    "message": "Web application generated (0 views)",
+    "progress": 46,
+    "artifactPath": "web/",
+    "id": "evt_1788203012942_234di",
+    "timestamp": "2026-08-31T19:03:32.942Z"
+  },
+  {
+    "projectId": "proj_1788202621341_48547300",
+    "stage": 7,
+    "agent": "Mobile Generator Agent",
+    "type": "AGENT_STARTED",
+    "status": "RUNNING",
+    "message": "Generating Expo React Native mobile application codebase...",
+    "progress": 46,
+    "id": "evt_1788203012943_di2hx",
+    "timestamp": "2026-08-31T19:03:32.943Z"
+  }
+]

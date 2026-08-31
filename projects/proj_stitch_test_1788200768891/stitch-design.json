@@ -1,0 +1,26 @@
+{
+  "projectId": "proj_stitch_test_1788200768891",
+  "appName": "FitVision AI",
+  "stitchProjectId": "14609340589732678170",
+  "status": "SUCCESS",
+  "screens": [
+    {
+      "screenId": "screen_workout_dash",
+      "screenName": "Workout & Posture Dashboard",
+      "stitchScreenId": "screen_1788200855307",
+      "status": "GENERATED",
+      "previewUrl": "https://stitch.google.com/projects/14609340589732678170/screens/screen_1788200855307"
+    },
+    {
+      "screenId": "screen_analytics",
+      "screenName": "Weekly Performance Analytics",
+      "stitchScreenId": "projects/14609340589732678170/screens/7981a8ff858648608f65c47664540844",
+      "status": "GENERATED",
+      "previewUrl": "https://stitch.google.com/projects/14609340589732678170/screens/7981a8ff858648608f65c47664540844",
+      "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1X1IxRHxAyhCZz2NsnUnaX3sIr6dqfZsRyEgbTSuuLvhdSvdAe4ZpOY11CEc32ATP6wqzP1qyBJLXya6K807cR7zg02Y1FCHF5VR7TozBEkF2EElO8o8u8OB0MXv1xXM-PIwakYvtnrEZbqfxpuT-8euj7gw94NaBKXhjPaNizBlYt4sb0NQP11XkdP79XYJ5YWUo_fUn4-MAE6fd-1gcGpsPzm5Pw65eXXlkmEenN3Je129kkeVwrwjIts",
+      "theme": {}
+    }
+  ],
+  "designSystemApplied": true,
+  "generatedAt": "2026-08-31T18:29:06.745Z"
+}

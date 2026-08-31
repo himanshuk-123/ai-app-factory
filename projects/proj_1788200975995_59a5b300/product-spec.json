@@ -1,0 +1,207 @@
+{
+  "projectId": "proj_1788200975995_59a5b300",
+  "idea": "Build QuickBite, a student meal planner app with dorm recipes and cooking timers",
+  "appName": "QuickBite: Dorm Eats & Timers",
+  "tagline": "Master dorm room cooking with microwave-ready recipes, appliance timers, and dining swipe tracking.",
+  "targetAudience": "College and university students living in dormitories or micro-apartments with limited cooking equipment (e.g., microwaves, mini-fridges, electric kettles, air fryers), tight food budgets ($30-$50/week), minimal culinary experience, and busy academic schedules.",
+  "mvpFeatures": [
+    {
+      "name": "Strict Equipment Filter Mode",
+      "description": "Filter recipes exclusively by available dorm appliances such as 'Microwave Only', 'Electric Kettle Only', 'Air Fryer', or 'No Prep/No Cook'.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Appliance-Calibrated Cooking Timers",
+      "description": "Interactive multi-stage timers calibrated for dorm tools, featuring microwave power-level pause alerts, stir notifications, and air fryer turn reminders.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Mini-Fridge & Budget Guardrail Recipes",
+      "description": "Recipes restricted to 5 ingredients or fewer that intentionally maximize ingredient reuse across weekly meals to fit small mini-fridge spaces and avoid food waste.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Campus Dining Hall Hybrid Planner",
+      "description": "Weekly scheduler combining campus dining hall meal swipe days with supplemental quick dorm-cooked meals to optimize meal plan value.",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Smart Mini-Fridge Grocery List",
+      "description": "Categorized grocery list optimized for small-batch purchases, consolidating common ingredients across selected weekly recipes.",
+      "priority": "MEDIUM"
+    }
+  ],
+  "futureFeatures": [
+    {
+      "name": "AI Mini-Fridge Leftover Generator",
+      "description": "Snap a photo or input leftover mini-fridge ingredients to generate instant dorm-appliance recipes.",
+      "phase": "Phase 2"
+    },
+    {
+      "name": "Community Dorm Hacks & Recipe Feed",
+      "description": "User-generated student recipes, dorm life cooking hacks, and localized store deal alerts.",
+      "phase": "Phase 2"
+    },
+    {
+      "name": "Campus Dining Hall Menu Sync API",
+      "description": "Direct integration with university dining hall daily menus to automatically recommend complementary dorm meals.",
+      "phase": "Phase 3"
+    }
+  ],
+  "userPersonas": [
+    {
+      "name": "Alex - College Freshman in Standard Dorm",
+      "role": "Freshman / Limited Equipment User",
+      "painPoints": [
+        "Only owns a microwave, mini-fridge, and electric kettle",
+        "Overspends on food delivery app fees during late-night study sessions",
+        "Groceries frequently spoil because the mini-fridge is cramped"
+      ],
+      "goals": [
+        "Cook quick, warm meals in under 10 minutes inside the dorm room",
+        "Keep weekly out-of-pocket grocery spending under $35",
+        "Avoid wasting unused ingredients"
+      ]
+    },
+    {
+      "name": "Maya - Junior with Partial Meal Plan",
+      "role": "Upperclassman / Hybrid Diner",
+      "painPoints": [
+        "Runs out of dining hall meal swipes before the week ends",
+        "Has an air fryer but lacks quick, student-friendly recipe ideas",
+        "Struggles to balance cooking with back-to-back classes and lab work"
+      ],
+      "goals": [
+        "Plan dining hall visits alongside 15-minute air fryer meals",
+        "Track remaining meal swipes while keeping dorm pantry stocked with basic staples"
+      ]
+    }
+  ],
+  "userJourneys": [
+    {
+      "flowName": "Appliance Setup & Weekly Hybrid Meal Planning",
+      "description": "User configures available appliances, weekly dining swipe count, and receives a tailor-made weekly meal plan.",
+      "steps": [
+        "User launches app and selects available appliances (Microwave, Electric Kettle, Mini-Fridge).",
+        "User inputs weekly campus meal swipe count (e.g., 10 swipes/week).",
+        "App generates a hybrid 7-day schedule assigning swipe days and 5-ingredient dorm meals for non-swipe slots.",
+        "User reviews automatically generated, small-batch grocery list."
+      ]
+    },
+    {
+      "flowName": "Interactive Microwave Mug Meal Cooking",
+      "description": "User selects a 5-minute microwave mug meal and follows the multi-stage interactive timer.",
+      "steps": [
+        "User selects '5-Minute Microwave Mac & Cheese' from the filtered home feed.",
+        "User taps 'Start Interactive Cooking Mode'.",
+        "Step 1 timer runs for 2 minutes at High Power for water boiling.",
+        "Audio and vibration prompt alerts user to add pasta & cheese, then stir.",
+        "Step 2 timer runs for 90 seconds at 50% Microwave Power to prevent boilovers.",
+        "Cooking complete prompt displays final rest timer and nutrition summary."
+      ]
+    }
+  ],
+  "screens": [
+    {
+      "id": "screen_onboarding",
+      "name": "Appliance & Profile Setup Screen",
+      "purpose": "Capture user's dorm cooking equipment, food budget, and meal swipe quota",
+      "keyComponents": [
+        "Appliance Checkbox Grid (Microwave, Air Fryer, Kettle, Hot Plate)",
+        "Weekly Budget Slider",
+        "Meal Swipe Count Input",
+        "Dietary Preference Toggles"
+      ]
+    },
+    {
+      "id": "screen_dashboard",
+      "name": "Home Dashboard Screen",
+      "purpose": "Display daily hybrid meal plan, meal swipe balance, and quick cooking launchpad",
+      "keyComponents": [
+        "Daily Hybrid Schedule Widget (Dining Hall vs Dorm Meal)",
+        "Meal Swipe Tracker Counter",
+        "Quick Equipment Filter Bar",
+        "Featured 5-Ingredient Recipe Carousel"
+      ]
+    },
+    {
+      "id": "screen_recipe_detail",
+      "name": "Recipe Detail & Prep Screen",
+      "purpose": "Provide ingredient checklists and step-by-step prep instructions optimized for dorm constraints",
+      "keyComponents": [
+        "Appliance Badges (e.g., Microwave 700W, 5 Ingredients)",
+        "Mini-Fridge Space Impact Meter",
+        "Ingredient Checklist with Substitute Hints",
+        "Start Guided Timer Button"
+      ]
+    },
+    {
+      "id": "screen_cooking_timer",
+      "name": "Guided Appliance Cooking Mode Screen",
+      "purpose": "Full-screen interactive multi-stage cooking timer with appliance-specific instructions",
+      "keyComponents": [
+        "Large Stage Countdown Ring",
+        "Appliance Power Level / Temperature Indicator",
+        "Audio & Vibration Notification Toggle",
+        "Next Step Preview Card"
+      ]
+    },
+    {
+      "id": "screen_grocery_list",
+      "name": "Smart Mini-Fridge Grocery Screen",
+      "purpose": "Consolidated shopping list categorized by aisle with mini-fridge volume management cues",
+      "keyComponents": [
+        "Categorized Checklist (Produce, Staples, Pantry)",
+        "Shared Ingredient Highlight Tags",
+        "Estimated Total Cost Counter",
+        "Clear Checked Items Action"
+      ]
+    }
+  ],
+  "navigationStructure": {
+    "type": "Bottom Tab Bar + Stack Navigation",
+    "mainTabs": [
+      "Dashboard",
+      "Recipes",
+      "Planner",
+      "Grocery",
+      "Profile"
+    ],
+    "routes": [
+      {
+        "name": "Dashboard",
+        "screenId": "screen_dashboard",
+        "description": "Main daily overview and hybrid meal schedule tab"
+      },
+      {
+        "name": "Recipes",
+        "screenId": "screen_recipe_detail",
+        "description": "Appliance-filtered recipe catalog and search"
+      },
+      {
+        "name": "CookingTimer",
+        "screenId": "screen_cooking_timer",
+        "description": "Active guided step-by-step timer modal"
+      },
+      {
+        "name": "Grocery",
+        "screenId": "screen_grocery_list",
+        "description": "Aggregated budget and mini-fridge optimized shopping list"
+      },
+      {
+        "name": "Onboarding",
+        "screenId": "screen_onboarding",
+        "description": "Initial setup flow for appliance profile"
+      }
+    ]
+  },
+  "techStack": {
+    "frontend": "React Native / Expo (TypeScript) with React Native Reanimated for Timer UI",
+    "backend": "Node.js / Express (TypeScript)",
+    "database": "PostgreSQL / Prisma ORM",
+    "auth": "Supabase Auth",
+    "hosting": "Render (Backend API) / Expo Application Services (Mobile Build)"
+  },
+  "monetizationModel": "Freemium model. Free tier includes access to basic microwave recipes, manual swipe tracking, and standard single-stage timers. 'QuickBite Pro' premium subscription ($2.99/month or $19.99/year) unlocks multi-stage appliance timers, mini-fridge ingredient reuse optimizer, air fryer recipe library, and meal swipe auto-scheduling.",
+  "generatedAt": "2026-08-31T18:30:38.063Z"
+}
